@@ -3,7 +3,6 @@ package FrameworkClasses;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -36,12 +35,5 @@ public class BasePage  implements Expectations {
     public List<WebElement> findElementsByXpath(String locator) {
         return waitVisibilityOfAllElementsLocatedBy(locator);
 
-    }
-    public void sleep(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }
