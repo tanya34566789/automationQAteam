@@ -21,11 +21,9 @@ public class googleHome extends BasePage {
     public WebElement javaSearch() {
         return driver.findElement(By.xpath("//h3[contains(@class,'DKV0Md')][contains(.,'Java | Oracle')]"));
     }
-//    dff
     public WebElement bashSearch() {
         return driver.findElement(By.xpath("//h3[contains(@class,\'LC20lb MBeuO DKV0Md\')][contains(.,'Bash')]"));
     }
-//    rty
     public WebElement catSearch() {
         return driver.findElement(By.xpath("//h3[contains(@class,\'LC20lb MBeuO DKV0Md\')][contains(.,'Cat - Wikipedia')]"));
     }
@@ -42,13 +40,13 @@ public class googleHome extends BasePage {
         return driver.findElement(By.xpath("//div[contains(@aria-haspopup,\'menu\')][contains(@class,\'PNyWAd ZXJQ7c\')]"));
     }
     public WebElement colorSomething() {
-        return driver.findElement(By.xpath("//div[contains(@class,\'xFo9P r9PaP\')][contains(@jsname,\'wLFV5d\')][.='Колір']"));
+        return driver.findElement(By.xpath("//div[2]/div/div[contains(@class,'xFo9P r9PaP')][contains(@jsname,'wLFV5d')]"));
     }
     public WebElement coloryEllowSomething() {
         return driver.findElement(By.xpath("//div[contains(@style,\'background-color:#FFEB3B\')]"));
     }
     public WebElement cleanUpSomething() {
-        return driver.findElement(By.xpath("//div[contains(@class,\'r9PaP \')][.='Очистити']"));
+        return driver.findElement(By.xpath("//a/div[contains(@class,'r9PaP ')]"));
     }
     public WebElement allSomething() {
         return driver.findElement(By.xpath("//a[contains(@jsname,\'ONH4Gc\')][contains(@class,\'NZmxZe\')][contains(@data-hveid,\'CAEQAA\')]"));
