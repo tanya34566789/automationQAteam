@@ -9,6 +9,5 @@ public class TestFindSmartphone extends TestInit {
     public void searchSmartphone(){
         Header header = new Header(driver);
         driver.get("https://www.foxtrot.com.ua");
-        sleep(1);
     }
 }
