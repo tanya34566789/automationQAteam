@@ -22,7 +22,6 @@ public class fromOneToOtherTest extends TestInit {
 //        wait(3);
         goGoogleHome.goToGoogle();
         goGoogleHome.findGoogleMap();
-        goGoogleHome.clickInSearchGoogleMap();
         goGoogleMap.clickHowToGetButton();
         goGoogleMap.writeWherefrom();
         goGoogleMap.writeGoTo();
