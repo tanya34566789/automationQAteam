@@ -13,43 +13,43 @@ public class googleHome extends BasePage {
     }
 
     public WebElement searchGoogle() {
-        return driver.findElement(By.xpath("//input[@name='q']"));
+        return findElementByXpath("//input[@name='q']");
     }
     public WebElement inSearchGoogleMap() {
-        return driver.findElement(By.xpath("//h3[contains(@class,\''LC20lb MBeuO DKV0Md\'')][contains(.,'Google')]"));
+        return findElementByXpath("//a[contains(@href,'https://www.google.com.ua/maps/@50.4851493,30.4721233,14z?hl=ru')]/h3[contains(@class,'LC20lb MBeuO DKV0Md')][contains(.,'Google')]");
     }
     public WebElement javaSearch() {
-        return driver.findElement(By.xpath("//h3[contains(@class,'DKV0Md')][contains(.,'Java | Oracle')]"));
+        return findElementByXpath("//h3[contains(@class,'DKV0Md')][contains(.,'Java | Oracle')]");
     }
     public WebElement bashSearch() {
-        return driver.findElement(By.xpath("//h3[contains(@class,\'LC20lb MBeuO DKV0Md\')][contains(.,'Bash')]"));
+        return findElementByXpath("//h3[contains(@class,'LC20lb MBeuO DKV0Md')][contains(.,'Bash')]");
     }
     public WebElement catSearch() {
-        return driver.findElement(By.xpath("//h3[contains(@class,\'LC20lb MBeuO DKV0Md\')][contains(.,'Cat - Wikipedia')]"));
+        return findElementByXpath("//h3[contains(@class,'LC20lb MBeuO DKV0Md')][contains(.,'Cat - Wikipedia')]");
     }
     public WebElement gitSearch() {
-        return driver.findElement(By.xpath("//h3[contains(@class,\'LC20lb MBeuO DKV0Md\')][contains(.,'Git')]"));
+        return findElementByXpath("//h3[contains(@class,'LC20lb MBeuO DKV0Md')][contains(.,'Git')]");
     }
     public WebElement googleRozetka() {
-        return driver.findElement(By.xpath("//h3[contains(.,'ROZETKA')]"));
+        return findElementByXpath("//h3[contains(.,'ROZETKA')]");
     }
     public WebElement imageSomething() {
-        return driver.findElement(By.xpath("//a[contains(@data-hveid,'CAIQA')]"));
+        return findElementByXpath("//a[contains(@data-hveid,'CAIQA')]");
     }
     public WebElement settingsSomething() {
-        return driver.findElement(By.xpath("//div[contains(@aria-haspopup,\'menu\')][contains(@class,\'PNyWAd ZXJQ7c\')]"));
+        return findElementByXpath("//div[contains(@aria-haspopup,'menu')][contains(@class,'PNyWAd ZXJQ7c')]");
     }
     public WebElement colorSomething() {
-        return driver.findElement(By.xpath("//div[2]/div/div[contains(@class,'xFo9P r9PaP')][contains(@jsname,'wLFV5d')]"));
+        return findElementByXpath("//div[2]/div/div[contains(@class,'xFo9P r9PaP')][contains(@jsname,'wLFV5d')]");
     }
     public WebElement coloryEllowSomething() {
-        return driver.findElement(By.xpath("//div[contains(@style,\'background-color:#FFEB3B\')]"));
+        return findElementByXpath("//div[contains(@style,'background-color:#FFEB3B')]");
     }
     public WebElement cleanUpSomething() {
-        return driver.findElement(By.xpath("//a/div[contains(@class,'r9PaP ')]"));
+        return findElementByXpath("//a/div[contains(@class,'r9PaP ')]");
     }
     public WebElement allSomething() {
-        return driver.findElement(By.xpath("//a[contains(@jsname,\'ONH4Gc\')][contains(@class,\'NZmxZe\')][contains(@data-hveid,\'CAEQAA\')]"));
+        return findElementByXpath("//a[contains(@jsname,'ONH4Gc')][contains(@class,'NZmxZe')][contains(@data-hveid,'CAEQAA')]");
     }
     public void goToGoogle() {
         driver.get("https://www.google.com/");
@@ -99,4 +99,5 @@ public class googleHome extends BasePage {
         searchGoogle().sendKeys("Cat\n");
         Assert.assertTrue(catSearch().isDisplayed());
     }
+
 }

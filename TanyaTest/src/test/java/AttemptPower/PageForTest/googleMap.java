@@ -4,114 +4,120 @@ import FrameworkClasses.BasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.openqa.selenium.Keys;
+
 
 public class googleMap extends BasePage {
     public googleMap(WebDriver driver) {
         super(driver);
     }
     public WebElement howToGetButton() {
-        return driver.findElement(By.xpath("//img[@src=\"//maps.gstatic.com/tactile/omnibox/directions-2x-20150909.png\"]"));
+        return findElementByXpath("//img[contains(@src,'//maps.gstatic.com/tactile/omnibox/directions-2x-20150909.png')]");
     }
     public WebElement wherefrom() {
-        return driver.findElement(By.xpath("//input[@class=\"tactile-searchbox-input\"][@aria-controls=\"sbsg51\"]"));
+        return findElementByXpath("//input[contains(@class,'tactile-searchbox-input')][contains(@aria-controls,'sbsg51')]");
     }
     public WebElement goTo() {
-        return driver.findElement(By.xpath("//input[@class=\"tactile-searchbox-input\"][@aria-controls=\"sbsg52\"]"));
+        return findElementByXpath("//input[contains(@class,'tactile-searchbox-input')][contains(@aria-controls,'sbsg52')]");
     }
     public WebElement byPublicTransport() {
-        return driver.findElement(By.xpath("//img[@jsan=\"7.OzmNAc,8.src,0.alt,22.jsaction,t-1otPa01IQM8,0.aria-label,0.data-tooltip\"]"));
+        return findElementByXpath("//img[contains(@jsan,'7.OzmNAc,8.src,0.alt,22.jsaction,t-1otPa01IQM8,0.aria-label,0.data-tooltip')]");
     }
     public WebElement restaurantOnTheWay() {
-        return driver.findElement(By.xpath("//div[@class=\"Qowlfc fCbqBc\"][@style=\"width:48px;height:48px;background-color:#188038\"]"));
+        return findElementByXpath("//div[contains(@class,'Qowlfc fCbqBc')][contains(@style,'width:48px;height:48px;background-color:#188038')]");
     }
     public WebElement rollDown() {
-        return driver.findElement(By.xpath("//div[@jsan=\"t-dgE5uNmzjiE,7.m6QErb,7.DxyBCb,7.kA9KIf,7.dS8AEf,7.ecceSd,7.QjC7t,0.aria-label,0.role,0.tabindex\"]"));
+        return findElementByXpath("//div[contains(@jsan,'t-dgE5uNmzjiE,7.m6QErb,7.DxyBCb,7.kA9KIf,7.dS8AEf,7.ecceSd,7.QjC7t,0.aria-label,0.role,0.tabindex')]");
     }
     public WebElement toCozyBar() {
-        return driver.findElement(By.xpath("//a[@aria-label=\"S&S Cozy bar\"]"));
+        return findElementByXpath("//a[contains(@aria-label,'S&S Cozy bar')]");
     }
     public WebElement leaveRestaurant() {
-        return driver.findElement(By.xpath("//a[@class=\"gscp_a\"]"));
+        return findElementByXpath("//a[contains(@class,'gscp_a')]");
     }
     public WebElement changeDestination() {
-        return driver.findElement(By.xpath("//div[@class=\"PLEQOe reverse\"]"));
+        return findElementByXpath("//div[contains(@class,'PLEQOe reverse')]");
     }
     public WebElement elemOne() {
-        return driver.findElement(By.xpath("//div[@class=\"d1qxPd\"]/button"));
+        return findElementByXpath("//div[contains(@class,'d1qxPd')]/button");
     }
     public WebElement elemTwo() {
-        return driver.findElement(By.xpath("//img[@id=\"section-directions-trip-travel-mode-0\"]"));
+        return findElementByXpath("//img[contains(@id,'section-directions-trip-travel-mode-0')]");
     }
     public WebElement menuButton() {
-        return driver.findElement(By.xpath("//div[@class=\"fKm1Mb\"][@jsan=\"7.fKm1Mb,t-Sq0C1nRBjnU\"]"));
+        return findElementByXpath("//div[contains(@class,'fKm1Mb')][contains(@jsan,'7.fKm1Mb,t-Sq0C1nRBjnU')]");
     }
     public WebElement directory() {
-        return driver.findElement(By.xpath("//button[@class=\"T2ozWe\"][@jsaction=\"settings.help\"]"));
+        return findElementByXpath("//button[contains(@class,'T2ozWe')][contains(@jsaction,'settings.help')]");
     }
     public WebElement searchInDirectory() {
-        return driver.findElement(By.xpath("//input[@class=\"help-panel-header__search-input\"][@placeholder=\"Поиск в Справке\"]"));
+        return findElementByXpath("//input[contains(@class,'help-panel-header__search-input')][contains(@placeholder,'Поиск в Справке')]");
     }
     public WebElement foundInDirectory() {
-        return driver.findElement(By.xpath("//span[@class=\"help-panel-search-result__text\"]/span[.='Начало работы с Google Картами']"));
+        return findElementByXpath("//span[contains(@class,'help-panel-search-result__text')]/span[contains(.,'Google')]");
     }
     public WebElement closeDirectory() {
-        return driver.findElement(By.xpath("//button[@class=\"help-panel-header__close-button\"]"));
+        return findElementByXpath("//button[contains(@class,'help-panel-header__close-button')]");
     }
     public WebElement searchSettings() {
-        return driver.findElement(By.xpath("//button[@class=\"T2ozWe\"][@jsaction=\"settings.link.settings\"]"));
+        return findElementByXpath("//button[contains(@class,'T2ozWe')][contains(@jsaction,'settings.link.settings')]");
     }
     public WebElement safeSearch() {
-        return driver.findElement(By.xpath("//div[@class=\"sliderbox\"]/div/span/div[@class=\"jfk-checkbox-checkmark\"]"));
+        return findElementByXpath("//div[contains(@class,'sliderbox')]/div/span/div[contains(@class,'jfk-checkbox-checkmark')]");
     }
     public WebElement resultsPerPage() {
-        return driver.findElement(By.xpath("//div[@class=\"goog-slider goog-slider-horizontal\"]"));
+        return findElementByXpath("//div[contains(@class,'goog-slider goog-slider-horizontal')]");
     }
     public WebElement noPopularQueries() {
-        return driver.findElement(By.xpath("//div[3]/div[@class=\"URIeEf\"]/div[2]/span[@class=\"jfk-radiobutton-radio\"]"));
+        return findElementByXpath("//div[3]/div[contains(@class,'URIeEf')]/div[2]/span[contains(@class,'jfk-radiobutton-radio')]");
     }
     public WebElement announcementResults() {
-        return driver.findElement(By.xpath("//div[4]/div[@class=\"URIeEf\"]/div[@aria-checked=\"false\"]/span[@class=\"jfk-radiobutton-radio\"]"));
+        return findElementByXpath("//div[4]/div[contains(@class,'URIeEf')]/div[contains(@aria-checked,'false')]/span[contains(@class,'jfk-radiobutton-radio')]");
     }
     public WebElement resultsIn() {
-        return driver.findElement(By.xpath("//div[@id=\"nwc\"]/span/div[@role=\"presentation\"]"));
+        return findElementByXpath("//div[contains(@id,'nwc')]/span/div[contains(@role,'presentation')]");
     }
     public WebElement regionSelection() {
-        return driver.findElement(By.xpath("//span[@style=\"border-top-color:#1a0dab\"]"));
+        return findElementByXpath("//span[contains(@style,'border-top-color:#1a0dab')]");
     }
     public WebElement regionSelectionUkraine() {
-        return driver.findElement(By.xpath("//div[@data-value=\"UA\"]/span[@class=\"jfk-radiobutton-radio\"]"));
+        return findElementByXpath("//div[contains(@data-value,'UA')]/span[contains(@class,'jfk-radiobutton-radio')]");
     }
     public WebElement doNotStore() {
-        return driver.findElement(By.xpath("//div[@id=\"form-buttons\"]/div[@style=\"user-select: none;\"][2]"));
+        return findElementByXpath("//div[contains(@id,'form-buttons')]/div[contains(@style,'user-select: none;')][2]");
     }
 
     public void clickHowToGetButton() {
         howToGetButton().click();
-    }
-    public void writeWherefrom() {
         wherefrom().clear();
         wherefrom().sendKeys("02000, Киев\n");
-    }
-    public void writeGoTo() {
         goTo().sendKeys("Бровары, Киевская область\n");
+        byPublicTransport().click();
     }
+
+
     public void clickRestaurantOnTheWay() {
         restaurantOnTheWay().click();
     }
     public void clickLeaveRestaurant() {
         leaveRestaurant().click();
     }
-    public void clickByPublicTransport() {
-        byPublicTransport().click();
-    }
+
     public void clickChangeDestination() {
         changeDestination().click();
-    }
-    public void writeTwoGoTo() {
         goTo().sendKeys("Калиновка, Киевская область, 07443\n");
     }
     public void clickMenuButton() {
         menuButton().click();
+        searchSettings().click();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.google.com.ua/preferences?hl=ru&prev=https%3A%2F%2Fwww.google.com.ua%2Fmaps%3Fhl%3Dru#location");
+        safeSearch().click();
+        resultsPerPage().click();
+        noPopularQueries().click();
+        announcementResults().click();
+        resultsIn().click();
+        regionSelection().click();
+        regionSelectionUkraine().click();
     }
     public void clickDirectory() {
         directory().click();
@@ -126,41 +132,20 @@ public class googleMap extends BasePage {
     public void clickCloseDirectory() {
         closeDirectory().click();
     }
-    public void clickSearchSettings() {
-        searchSettings().click();
-    }
-    public void clickSafeSearch() {
-        safeSearch().click();
-    }
-    public void clickResultsPerPage() {
-        resultsPerPage().click();
-    }
-    public void clickNoPopularQueries() {
-        noPopularQueries().click();
-    }
     public void goToCozyBar() {
         toCozyBar().click();
     }
-    public void clickAnnouncementResults() {
-        announcementResults().click();
-    }
-    public void clickResultsIn() {
-        resultsIn().click();
-    }
-    public void clickMoreRegionSelection() {
-        regionSelection().click();
-    }
-    public void clickRegionSelectionUkraine() {
-        regionSelectionUkraine().click();
-    }
+
+
+
     public void clickDoNotStore() {
         doNotStore().click();
     }
     public void enter() {
         Actions actions = new Actions(driver);
-        actions.keyDown(Keys.ENTER);
+        actions.sendKeys(Keys.ENTER).perform();
+        Assert.assertEquals( "Google Карти", driver.getTitle());
     }
-    public void searchAuditGoogleMap() {
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.google.com.ua/preferences?hl=ru&prev=https%3A%2F%2Fwww.google.com.ua%2Fmaps%3Fhl%3Dru#location");
-    }
+//    actions.moveToElement(search).click().build().perform();
+
 }
