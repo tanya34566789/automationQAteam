@@ -16,5 +16,6 @@ public class googleTest1 extends TestInit {
         googleHomePage.findCatAndAssert();
         googleHomePage.findGit();
         googleHomePage.findRozetka();
+        googleHomePage.listFoundGoods();
     }
 }

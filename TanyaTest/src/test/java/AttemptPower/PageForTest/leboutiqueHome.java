@@ -32,13 +32,13 @@ public class leboutiqueHome extends BasePage {
         categoryRaincoat().click();
     }
     public WebElement priceButton(){
-        return driver.findElement(By.xpath("//div[@id='a_filter_price'][@class='set-filter__it dropdown']"));
+        return findElementByXpath("//div[@id='a_filter_price'][@class='set-filter__it dropdown']");
     }
     public void clickPriceButton (){
         priceButton().click();
     }
     public WebElement priceFrom(){
-        return driver.findElement(By.xpath("//input[@class='ctrl__input'][@name='fprice__from']"));
+        return findElementByXpath("//input[@class='ctrl__input'][@name='fprice__from']");
     }
     public void clearPriceFrom(){
         priceFrom().clear();
