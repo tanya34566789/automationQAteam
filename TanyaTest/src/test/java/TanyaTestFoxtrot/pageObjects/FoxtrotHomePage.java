@@ -8,6 +8,7 @@ public class FoxtrotHomePage extends BasePage{
     public FoxtrotHomePage(WebDriver driver) {
         super(driver);
     }
+
     public void navigateFoxtrot() {
         driver.get("https://www.foxtrot.com.ua/");
     }

@@ -12,6 +12,8 @@ public class TestFoxtrot extends TestInit{
         Assert.assertTrue(foxtrotHomePage.getLogoImage().isDisplayed());
         Assert.assertTrue(foxtrotHomePage.getItems().isDisplayed());
         Assert.assertTrue(foxtrotHomePage.getSearchField().isDisplayed());
+
+
     }
 
     @Test
