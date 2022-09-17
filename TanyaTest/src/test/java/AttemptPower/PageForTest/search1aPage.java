@@ -28,7 +28,6 @@ public class search1aPage extends BasePage {
 
     public void findOfficeFurniture() {
         serchField().sendKeys("office furniture\n");
-        Assert.assertTrue(officeChairs().isDisplayed());
     }
 
     public void clickOfficeChairs() {
