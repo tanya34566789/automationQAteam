@@ -4,7 +4,7 @@ import TanyaTestFoxtrot.pageObjects.FoxtrotHomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestFoxtrot extends TestInit{
+public class TestFoxtrot extends TestInit {
     @Test
     public void cheackHeader() {
         FoxtrotHomePage foxtrotHomePage = new FoxtrotHomePage(driver);
@@ -12,8 +12,6 @@ public class TestFoxtrot extends TestInit{
         Assert.assertTrue(foxtrotHomePage.getLogoImage().isDisplayed());
         Assert.assertTrue(foxtrotHomePage.getItems().isDisplayed());
         Assert.assertTrue(foxtrotHomePage.getSearchField().isDisplayed());
-
-
     }
 
     @Test
@@ -21,24 +19,30 @@ public class TestFoxtrot extends TestInit{
         FoxtrotHomePage foxtrotHomePage = new FoxtrotHomePage(driver);
         foxtrotHomePage.navigateFoxtrot();
         foxtrotHomePage.getSearchField().sendKeys("Smartphones\n");
-        sleep(2);
         Assert.assertTrue(foxtrotHomePage.getSearchField().isDisplayed());
         foxtrotHomePage.getPrice().sendKeys("000");
-        sleep(2);
         Assert.assertTrue(foxtrotHomePage.getPrice().isDisplayed());
         foxtrotHomePage.getPriceOk().click();
-        sleep(1);
         foxtrotHomePage.getSamsungA().click();
-        // Assert.assertTrue(foxtrotHomePage.getSamsungA().isDisplayed());
-        sleep(2);
+        Assert.assertTrue(foxtrotHomePage.getSamsungA().isDisplayed());
         foxtrotHomePage.getBuyBtn().click();
-        //Assert.assertTrue(foxtrotHomePage.getBuyBtn().isDisplayed());
-        sleep(2);
+        Assert.assertTrue(foxtrotHomePage.getBuyBtn().isDisplayed());
         foxtrotHomePage.getBasketIcon().click();
-        sleep(2);
         Assert.assertTrue(foxtrotHomePage.getBasketIcon().isDisplayed());
     }
-}
 
+    @Test
+    public void checkFilter() {
+        FoxtrotHomePage foxtrotHomePage = new FoxtrotHomePage(driver);
+        foxtrotHomePage.navigateFoxtrot();
+        foxtrotHomePage.getSearchField().sendKeys("Smartphones\n");
+        Assert.assertTrue(foxtrotHomePage.getSearchField().isDisplayed());
+        foxtrotHomePage.getIcon().click();
+        for (int i = 0; i < 6; i++) {
+            foxtrotHomePage.getBrand().get(i).click();
+        }
+
+    }
+}
 
 
