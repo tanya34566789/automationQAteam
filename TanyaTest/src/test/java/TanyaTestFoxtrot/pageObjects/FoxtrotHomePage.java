@@ -3,6 +3,8 @@ package TanyaTestFoxtrot.pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class FoxtrotHomePage extends BasePage{
 
     public FoxtrotHomePage(WebDriver driver) {
@@ -38,7 +40,12 @@ public class FoxtrotHomePage extends BasePage{
     }
     public WebElement getBasketIcon() {
         return findElementByXpath("(//div[@class='header-tooltip-footer__col'])[2]");
-
+    }
+    public WebElement getIcon() {
+        return findElementByXpath("//div[@id = 'group-9501']//child::i");
+    }
+    public List<WebElement> getBrand() {
+        return findElementsByXpath("//label[contains(@for, 'sidebar-check-input-9501')]");
     }
 }
 
