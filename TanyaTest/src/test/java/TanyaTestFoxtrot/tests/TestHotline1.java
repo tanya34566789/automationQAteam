@@ -1,16 +1,13 @@
 package TanyaTestFoxtrot.tests;
 
 import TanyaTestFoxtrot.pageObjects.HotlineHomePage;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class TestHotline extends TestInit {
+public class TestHotline1 extends TestInit {
     @Test
     public void cheackHomeSpan() {
         HotlineHomePage hotlineHomePage = new HotlineHomePage(driver);

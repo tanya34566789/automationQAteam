@@ -1,4 +1,4 @@
-package TanyaTestFoxtrot;
+package TanyaTestFoxtrot.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -14,13 +14,13 @@ public class TestInit {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
 
     }
-    @AfterMethod
+      @AfterMethod
     public void quit() {
-        driver.quit();
-    }
-
+      driver.quit();
+   }
 
     public void sleep(int seconds) {
         try {
