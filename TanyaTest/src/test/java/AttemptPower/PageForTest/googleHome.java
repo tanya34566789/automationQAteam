@@ -121,7 +121,7 @@ public class googleHome extends BasePage {
         searchGoogle().clear();
         searchGoogle().sendKeys("Rozetka\n");
         googleRozetka().click();
-        Assert.assertEquals(driver.getCurrentUrl(), "https://rozetka.com.ua/ua/");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://rozetka.com.ua/");
         fieldSearchRozetka().sendKeys("Ноутбуки\n");
 
     }

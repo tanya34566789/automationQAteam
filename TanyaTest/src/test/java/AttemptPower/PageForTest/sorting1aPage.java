@@ -89,9 +89,11 @@ public class sorting1aPage extends BasePage {
         wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[contains(@data-filter-element,'epicentr')]/parent::label/child::span")));
         buttonSeller().click();
         Assert.assertTrue(fieldFilterSeller().isDisplayed());
+        refresh();
         wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//label//a[contains(@href,'/shop/smartfony-i-mobilnye-telefony/fs/brend-alcatel/')]/parent::span")));
         buttonBrand().click();
         Assert.assertTrue(fieldFilterBrand().isDisplayed());
+        refresh();
         wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//label//a[contains(@href,'/shop/smartfony-i-mobilnye-telefony/fs/diagonal-617/')]/parent::span")));
         buttonDiagonal().click();
         Assert.assertTrue(fieldFilterDiagonal().isDisplayed());
