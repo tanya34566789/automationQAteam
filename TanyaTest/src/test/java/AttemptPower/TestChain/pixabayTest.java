@@ -1,7 +1,7 @@
 package AttemptPower.TestChain;
 
 import AttemptPower.PageForTest.pixabayHome;
-import FrameworkClasses.TestInit;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 public class pixabayTest extends TestInit {

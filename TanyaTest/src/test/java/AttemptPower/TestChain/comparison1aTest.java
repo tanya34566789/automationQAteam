@@ -1,7 +1,7 @@
 package AttemptPower.TestChain;
 
 import AttemptPower.PageForTest.comparison1aPage;
-import FrameworkClasses.TestInit;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 public class comparison1aTest extends TestInit {

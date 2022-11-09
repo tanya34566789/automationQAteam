@@ -1,7 +1,7 @@
 package AttemptPower.TestChain;
 
 import AttemptPower.PageForTest.sorting2aPage;
-import FrameworkClasses.TestInit;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 public class sorting2aTest extends TestInit {

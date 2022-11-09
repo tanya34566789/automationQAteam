@@ -1,7 +1,7 @@
 package AttemptPower.TestChain;
 
 import AttemptPower.PageForTest.login2aPage;
-import FrameworkClasses.TestInit;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 public class login2aTest extends TestInit {

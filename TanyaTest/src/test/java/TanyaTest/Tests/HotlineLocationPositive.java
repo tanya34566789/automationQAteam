@@ -1,6 +1,7 @@
 package TanyaTest.Tests;
 
-import FrameworkClasses.TestInit;
+
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -18,9 +19,9 @@ public class HotlineLocationPositive extends TestInit {
     public void ChangeCorrectLocation() {
    HotlineLocationPositive hotlineLocationPositive = new HotlineLocationPositive(driver);
        hotlineLocationPositive.navigateHotline();
-        hotlineLocationPositive.locationBTN().click();
-        hotlineLocationPositive.locationKyiv().click();
-
-       Assert.assertEquals(hotlineLocationPositive.getLocation(), "Київ");
+//        hotlineLocationPositive.locationBTN().click();
+//        hotlineLocationPositive.locationKyiv().click();
+//
+//       Assert.assertEquals(hotlineLocationPositive.getLocation(), "Київ");
     }
 }

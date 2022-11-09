@@ -1,7 +1,7 @@
 package TanyaTest.Tests;
 
-import FrameworkClasses.TestInit;
 import TanyaTest.Pages.HotlineHomePage;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,6 +1,6 @@
 package AttemptPower.PageForTest;
 
-import FrameworkClasses.BasePage;
+import TanyaTestFoxtrot.pageObjects.BasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;

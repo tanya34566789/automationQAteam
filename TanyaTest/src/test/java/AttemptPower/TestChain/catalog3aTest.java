@@ -1,7 +1,7 @@
 package AttemptPower.TestChain;
 
 import AttemptPower.PageForTest.catalog3aPage;
-import FrameworkClasses.TestInit;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 public class catalog3aTest extends TestInit {

@@ -1,7 +1,8 @@
 package TanyaTest.Tests;
 
-import FrameworkClasses.TestInit;
+
 import TanyaTest.Pages.AlloPage;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

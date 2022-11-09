@@ -1,4 +1,4 @@
-package FrameworkClasses;
+package TanyaTestFoxtrot;
 
 import org.openqa.selenium.WebElement;
 

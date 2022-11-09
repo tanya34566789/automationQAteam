@@ -1,7 +1,7 @@
 package AttemptPower.TestChain;
 
-import FrameworkClasses.TestInit;
 import AttemptPower.PageForTest.googleHome;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 public class googleTest1 extends TestInit {

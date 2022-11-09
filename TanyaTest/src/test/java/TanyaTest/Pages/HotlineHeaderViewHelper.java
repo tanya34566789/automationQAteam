@@ -1,6 +1,6 @@
 package TanyaTest.Pages;
 
-import FrameworkClasses.TestInit;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,7 @@ public class HotlineHeaderViewHelper extends HotlineHeaderViewElements{
 
     public void setLocationText() {
 
-        location = locationBtnKyiv().getText();
+//        location = locationBtnKyiv().getText();
     }
 
     public void closePopUp() {
