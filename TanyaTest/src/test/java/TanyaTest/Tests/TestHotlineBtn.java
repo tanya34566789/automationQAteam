@@ -1,7 +1,7 @@
 package TanyaTest.Tests;
 
-import FrameworkClasses.TestInit;
 import TanyaTest.Pages.HotlineHomePageBtn;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.testng.annotations.Test;
 
 import javax.swing.*;

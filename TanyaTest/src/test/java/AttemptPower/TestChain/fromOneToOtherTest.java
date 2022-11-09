@@ -2,8 +2,9 @@ package AttemptPower.TestChain;
 
 import AttemptPower.PageForTest.googleHome;
 import AttemptPower.PageForTest.googleMap;
-import FrameworkClasses.BasePage;
-import FrameworkClasses.TestInit;
+
+
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;

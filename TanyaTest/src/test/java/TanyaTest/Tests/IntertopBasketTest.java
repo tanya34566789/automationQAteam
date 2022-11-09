@@ -1,7 +1,7 @@
 package TanyaTest.Tests;
 
-import FrameworkClasses.TestInit;
 import TanyaTest.Pages.IntertopBasketPage;
+import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;

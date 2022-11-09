@@ -1,6 +1,6 @@
 package TanyaTest.Pages;
 
-import FrameworkClasses.BasePage;
+import TanyaTestFoxtrot.pageObjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
