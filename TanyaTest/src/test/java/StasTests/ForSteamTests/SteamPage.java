@@ -16,5 +16,8 @@ public class SteamPage extends TestInit {
     public String logPass(){
         return "380661483541Sss";
     }
+    public String realName(){
+        return "QweAsd";
+    }
 }
 

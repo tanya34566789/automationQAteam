@@ -140,20 +140,20 @@ public class SteamHomePage extends BasePage {
     public WebElement communitySubMenu(){
         return findElementByXpath("//a[@class=\"menuitem supernav\"][text()[contains(.,'COMMUNITY')]]");
     }
-    public WebElement communityDota2(){
-        return findElementByXpath("//a[@class=\"appHubShortcut_Title ellipsis\"][text()[contains(.,'Dota 2')]]");
+    public WebElement communityGame(){
+        return findElementByXpath("//a[contains(@class,'le ')]");
     }
     public WebElement followCommunity(){
-        return findElementByXpath("//a[@onclick=\"joinOGG( 570); return false;\"]");
+        return findElementByXpath("//a[@onclick=\"joinOGG( 730); return false;\"]");
     }
-    public WebElement workshopButton(){
-        return findElementByXpath("//a[contains(@href,'/570/workshop/')]");
+    public WebElement gameNewsButton(){
+        return findElementByXpath("//a[contains(@href,'allnews/')]");
     }
     public WebElement skinVote(){
         return findElementByXpath("//div[@class=\"voting_queue_link\"]");
     }
     public WebElement unfollowCommunity(){
-        return findElementByXpath("//a[@onclick=\"leaveOGG( 570); return false;\"]");
+        return findElementByXpath("//a[@onclick=\"leaveOGG( 730); return false;\"]");
     }
     public WebElement storeSubMenu(){
         return findElementByXpath("//a[@class=\"menuitem supernav\"][contains(@href,'-header')]");
@@ -253,5 +253,29 @@ public class SteamHomePage extends BasePage {
     }
     public WebElement removeLicense(){
         return findElementByXpath("//div[contains(@class,'license')]");
+    }
+    public WebElement realNameField() {
+        return findElementByXpath("//div[contains(@class,'e ellipsis')]");
+    }
+    public WebElement removeAssert(){
+        return findElementByXpath("//td[@colspan=\"3\"]");
+    }
+    public WebElement check(){
+        return findElementByXpath("//input[@id=\"ViewAllForApp\"]");
+    }
+    public WebElement ageGate(){
+        return findElementByXpath("//div[@id=\"age_gate_btn_continue\"]");
+    }
+    public WebElement gameNewsAssert(){
+        return findElementByXpath("//div[@id=\"filterselect_activeday\"]");
+    }
+    public WebElement topSellersAssert(){
+        return findElementByXpath("//h1[contains(., 'Top Sellers')]");
+    }
+    public WebElement mostPlayedAssert(){
+        return findElementByXpath("//h1[contains(., 'Most Played')]");
+    }
+    public WebElement removeWishlistAssert(){
+        return findElementByXpath("//div[@id=\"nothing_to_see_here\"]");
     }
 }
