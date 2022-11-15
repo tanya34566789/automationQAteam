@@ -278,4 +278,10 @@ public class SteamHomePage extends BasePage {
     public WebElement removeWishlistAssert(){
         return findElementByXpath("//div[@id=\"nothing_to_see_here\"]");
     }
+    public WebElement errorAssert(){
+        return findElementByXpath("//div[contains(@class,'mE')]");
+    }
+    public WebElement chatErrorAssert(){
+        return findElementByXpath("//div[contains(@class,'Error')]");
+    }
 }
