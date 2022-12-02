@@ -1,4 +1,4 @@
-package TestFromVlados;
+package TestFromVlados.ApiTest;
 
 public class SuccesReg extends RegisterApi {
     public Integer id;
