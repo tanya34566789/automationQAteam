@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f89bbe-4d49-47d6-a9a3-d39af92fcfd9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/UiTest/ForSpotifyTests/SpotifyHomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/UiTest/ForSpotifyTests/SpotifyPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/TanyaTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/TanyaTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ColorsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/ColorsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/CreateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/CreateUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/CreateUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/FailReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/FailReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/LoginApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/LoginApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/LoginSucces.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/LoginSucces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/LoginUnSucces.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/LoginUnSucces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/RegisterApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/RegisterApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ReqresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/ReqresTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/SuccesReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/SuccesReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/TimeToUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/TimeToUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/UserTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/UserTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/UserTimeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/src/test/java/TestFromVlados/ApiTest/UserTimeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +23,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Любов/Desktop/git2/automationQAteam/TanyaTest/src/test/java/TestFromVlados/UiTest"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Любов/Desktop/git2/automationQAteam/TanyaTest/src/test/java/TestFromVlados/UiTest&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Любов\Desktop\git2\automationQAteam\TanyaTest\src\test\java\TestFromVlados\UiTest" />
