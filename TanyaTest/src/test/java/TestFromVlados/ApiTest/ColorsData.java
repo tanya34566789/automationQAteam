@@ -1,4 +1,4 @@
-package TestFromVlados;
+package TestFromVlados.ApiTest;
 
 public class ColorsData {
     private Integer id;

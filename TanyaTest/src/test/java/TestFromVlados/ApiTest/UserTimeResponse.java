@@ -1,4 +1,4 @@
-package TestFromVlados;
+package TestFromVlados.ApiTest;
 
 public class UserTimeResponse extends UserTime {
     private String updateAt;
