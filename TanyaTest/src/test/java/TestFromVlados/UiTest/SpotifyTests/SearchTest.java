@@ -1,7 +1,5 @@
 package TestFromVlados.UiTest.SpotifyTests;
 
-import TestFromVlados.SpotifyTests.ForSpotifyTests.SpotifyHomePage;
-import TestFromVlados.SpotifyTests.ForSpotifyTests.SpotifyPage;
 import TestFromVlados.UiTest.ForSpotifyTests.SpotifyHomePage;
 import TestFromVlados.UiTest.ForSpotifyTests.SpotifyPage;
 import org.testng.Assert;
