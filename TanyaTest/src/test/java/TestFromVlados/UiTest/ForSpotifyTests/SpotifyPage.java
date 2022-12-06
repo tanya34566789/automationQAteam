@@ -1,11 +1,17 @@
 package TestFromVlados.UiTest.ForSpotifyTests;
 
 
+import TanyaTestFoxtrot.pageObjects.BasePage;
 import TanyaTestFoxtrot.pageObjects.TestInit;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 
-public class SpotifyPage extends TestInit {
+public class SpotifyPage extends BasePage {
+    public SpotifyPage(WebDriver driver) {
+        super(driver);
+    }
+
     public void goSpofify() {
         driver.get("https://open.spotify.com/");
     }
@@ -30,14 +36,4 @@ public class SpotifyPage extends TestInit {
         return new Actions(driver);
     }
 
-    @BeforeMethod
-    public void loginSpotify() {
-        SpotifyHomePage spotifyHomePage = new SpotifyHomePage(driver);
-        goSpofify();
-        spotifyHomePage.loginButton().click();
-        spotifyHomePage.emailField().sendKeys(emailSpotify());
-        spotifyHomePage.passwordField().sendKeys(passwordSpotify());
-        spotifyHomePage.signButton().click();
-        spotifyHomePage.closeNotification().click();
-    }
 }
