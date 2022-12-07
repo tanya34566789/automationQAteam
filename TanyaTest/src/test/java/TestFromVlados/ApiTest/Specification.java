@@ -1,4 +1,4 @@
-package TestFromVlados;
+package TestFromVlados.ApiTest;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
