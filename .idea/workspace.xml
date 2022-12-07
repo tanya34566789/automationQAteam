@@ -6,11 +6,39 @@
   <component name="ChangeListManager">
     <list default="true" id="51f89bbe-4d49-47d6-a9a3-d39af92fcfd9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/TanyaTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/TanyaTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/StasTests/ForSteamTests/SteamHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/target/test-classes/StasTests/ForSteamTests/SteamHomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/StasTests/ForSteamTests/SteamPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/target/test-classes/StasTests/ForSteamTests/SteamPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TanyaTestFoxtrot/pageObjects/TestInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/TanyaTest/target/test-classes/TanyaTestFoxtrot/pageObjects/TestInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/ColorsData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/CreateUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/CreateUserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/FailReg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/LoginApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/LoginSucces.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/LoginUnSucces.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/RegisterApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/ReqresTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/Specification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/SuccesReg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/TimeToUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/UserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/UserTime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/api/UserTimeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanyaTest/target/test-classes/TestFromVlados/q.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,13 +72,13 @@
       <module name="TanyaTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AttemptPower.TestChain.*" />
+          <option name="PATTERN" value="Veliki.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="AttemptPower.TestChain" />
-      <option name="MAIN_CLASS_NAME" value="AttemptPower.TestChain.basket1aTest" />
-      <option name="METHOD_NAME" value="basket1aEpicentr" />
+      <option name="PACKAGE_NAME" value="TestSerhio.TestVeliki" />
+      <option name="MAIN_CLASS_NAME" value="Veliki.TestVelikiEnterUnregisteredClient" />
+      <option name="METHOD_NAME" value="velikiEnterUnregisteredClient" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -60,7 +88,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.basket1aTest.basket1aEpicentr" />
+        <item itemvalue="TestNG.Filters.Filters" />
+        <item itemvalue="TestNG.EnterUnregisteredClient.EnterUnregisteredClient" />
+        <item itemvalue="TestNG.BergamontDiscont.bergamontDiscont" />
+        <item itemvalue="TestNG.TestHotline.checkHomeSpan" />
+        <item itemvalue="TestNG.TestVelikiEnterUnregisteredClient.velikiEnterUnregisteredClient" />
       </list>
     </recent_temporary>
   </component>
