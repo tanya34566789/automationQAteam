@@ -10,9 +10,28 @@ public class HomePage_Main extends BasePage {
         super(driver);
     }
 
-    public WebElement AdvertisingSlider(){
+    public WebElement advertisingSlider(){
         return driver.findElement(By.xpath("//div[contains(@id, 'Rotator')]/div[contains(@class, 'vtlkSlider')]"));
     }
 
+    public WebElement productOfTheDayContainer(){
+        return driver.findElement(By.xpath("//div[contains(@class, 'main-rotator__row')]"));
+    }
+
+    public WebElement popularCategoryContainer(){
+        return driver.findElement(By.xpath("//div[contains(@class, 'container')]/div[contains(@class, 'offer-block')]"));
+    }
+
+    public WebElement overviewOfTheCategoriesContainer(){
+        return driver.findElement(By.xpath("//div[contains(@class, 'ready')]"));
+    }
+
+    public WebElement partnersSliderContainer(){
+        return driver.findElement(By.xpath("//div[contains(@class, 'filter-slider--categories')]/div[contains(@class, 'filter-slides')]"));
+    }
+
+    public WebElement storeDescriptionContainer(){
+        return driver.findElement(By.xpath("//div[contains(@class, 'seo-container')]"));
+    }
 
 }
