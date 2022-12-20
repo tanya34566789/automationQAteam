@@ -10,11 +10,15 @@ public class HomePage_Footer extends BasePage {
         super(driver);
     }
 
-public WebElement socialNetworksContainer(){
+    public WebElement socialNetworksContainer(){
         return driver.findElement(By.id("//div[contains(@class, 'footer__blue')]"));
 }
 
-public WebElement footerContainer(){
+    public WebElement footerContainer(){
         return driver.findElement(By.id("//div[contains(@class, 'footer__info')]"));
+}
+    public WebElement footerCopywritingContainer(){
+        return driver.findElement(By.id("//div[contains(@class, 'footer__copywriting')]"));
+
 }
 }
