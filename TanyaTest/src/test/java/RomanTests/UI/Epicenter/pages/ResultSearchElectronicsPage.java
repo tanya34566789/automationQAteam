@@ -49,8 +49,10 @@ public class ResultSearchElectronicsPage extends BasePage {
         return findElementByXpath("//*[contains(text(), 'sE7')]");
     }
 
-    public WebElement card(){
-        return findElementByXpath("//div[contains(@class, 'card ')]");
+    public List<WebElement> cards(){
+        return findElementsByXpath("//div[contains(@class, 'card ')]");
     }
+
+
 
 }
