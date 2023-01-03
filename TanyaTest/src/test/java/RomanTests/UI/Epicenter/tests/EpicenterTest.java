@@ -59,17 +59,6 @@ public class EpicenterTest extends TestInit {
         selectСityPage.searchFieldСity().sendKeys("Бровари");
         sleep(1);
 
-        // питання
-        // список результату пошуку завжди щось в собі містить(чому не пустий) навіть коли запит невірний
-//        if(selectСityPage.resultsOfSearchCity().size() == 1){
-//            System.out.println("English input is not supported,  the entered text is Ukrainian");
-//        } if(selectСityPage.resultsOfSearchCity().size() > 1){
-//            System.out.println("input in English is supported, you need to continue checking");
-//            System.out.println(selectСityPage.resultsOfSearchCity().toString());
-//            // add search by english text
-//        }
-//            selectСityPage.searchFieldСity().clear();
-//            selectСityPage.searchFieldСity().sendKeys("otherCity\n");
         Assert.assertTrue(selectСityPage.getBrovaryCity().isDisplayed());
         selectСityPage.getBrovaryCity().click();
         selectСityPage.brovaryCityResultSearch().click();
@@ -86,13 +75,6 @@ public class EpicenterTest extends TestInit {
         logInPage.inputLoginField().sendKeys("0671607348");
         logInPage.inputPasswordField().sendKeys("Samsung1127_");
         logInPage.submitButton().click();
-//        Assert.assertTrue(!logInPage.wrongPasswordOrLoginText().isDisplayed());
-//        if(logInPage.wrongPasswordOrLoginText().isDisplayed()){
-//            homePage.goEpicenterHomePage();
-//            System.out.println("login failed, homepage is running");
-//        }else {
-//            System.out.println("login successful");
-//        }
         }
 
 
@@ -102,12 +84,7 @@ public class EpicenterTest extends TestInit {
             homePage.goEpicenterHomePage();
             homePage.headerSearchField().sendKeys("electronics\n");
             ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
-//            Assert.assertTrue(resultSearchElectronicsPage.freezerKS1100F().isDisplayed());
-//            sleep(5);
-//            Assert.assertTrue(resultSearchElectronicsPage.element().isDisplayed());
-//            Assert.assertTrue(resultSearchElectronicsPage.termoreg().isDisplayed());
             resultSearchElectronicsPage.freezerKS1100F().click();
-////            FreezerPage freezerPage = new FreezerPage(driver);
             FreezerPageHelper freezerPageHelper = new FreezerPageHelper(driver);
             FreezerPage freezerPage = new FreezerPage(driver);
             freezerPageHelper.checkPrice();
@@ -136,22 +113,11 @@ public class EpicenterTest extends TestInit {
                     .sendKeys(homePage.headerSearchField(), "ababagalamagama\n")
                     .keyUp(homePage.headerSearchField(), Keys.SHIFT)
                     .build();
-//            builder.perform();
             sleep(4);
         }
 
 
-        //filed test
-//        @Test
-//        public void cupsComparing(){
-//            HomePage homePage = new HomePage(driver);
-//            homePage.goEpicenterHomePage();
-//            homePage.headerSearchField().sendKeys("electronics\n");
-//            ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
-//            ResultSearchElectronicsPageHelper resultSearchElectronicsPageHelper = new ResultSearchElectronicsPageHelper(driver);
-////            resultSearchElectronicsPageHelper.checkMicrophonesList();
-//            resultSearchElectronicsPageHelper.card().findElement((By) resultSearchElectronicsPage.microphoneSE7());
-//        }
+
 
     }
 
