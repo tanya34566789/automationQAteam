@@ -4,6 +4,7 @@ import RomanTests.UI.Epicenter.pages.*;
 import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -69,7 +70,6 @@ public class EpicenterTest extends TestInit {
     public void testLogIn() {
         HomePage homePage = new HomePage(driver);
         LogInPage logInPage = new LogInPage(driver);
-        setUp();
         homePage.goEpicenterHomePage();
         homePage.headerLoginContainer().click();
         logInPage.inputLoginField().sendKeys("0671607348");
@@ -116,7 +116,24 @@ public class EpicenterTest extends TestInit {
         sleep(4);
     }
 
+    @Test
+    public void likeAllResults() {
+        HomePage homePage = new HomePage(driver);
+        LogInPage logInPage = new LogInPage(driver);
+        homePage.goEpicenterHomePage();
+        homePage.headerLoginContainer().click();
+        logInPage.inputLoginField().sendKeys("0671607348");
+        logInPage.inputPasswordField().sendKeys("Samsung1127_");
+        logInPage.submitButton().click();
+        sleep(3);
+        homePage.headerSearchField().sendKeys("electronics\n");
+        ResultSearchElectronicsPage resultSearchPage = new ResultSearchElectronicsPage(driver);
+        sleep(2);
+        for (WebElement like : resultSearchPage.likeList()) {
+            like.click();
+        }
 
+    }
 
 
 }

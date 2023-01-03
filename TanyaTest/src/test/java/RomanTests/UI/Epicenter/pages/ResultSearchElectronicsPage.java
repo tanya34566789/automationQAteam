@@ -34,9 +34,9 @@ public class ResultSearchElectronicsPage extends BasePage {
         return findElementsByXpath("//span[contains(text(), 'Мікрофон')]/ancestor::div[contains(@class, 'card ')]");
     }
 
-//    public List<WebElement> likeList() {
-//        return findElementsByXpath("//a[contains(@class, 'js-tooltip-top')]");
-//    }
+    public List<WebElement> likeList() {
+        return findElementsByXpath("//a[contains(@onclick, 'favorite')]");
+    }
     public WebElement compareElByMicrophone() {
         return findElementByXpath("//a[contains(@class, 'js-tooltip-top')]");
     }
