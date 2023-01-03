@@ -2,12 +2,10 @@ package RomanTests.UI.Epicenter.tests;
 
 import RomanTests.UI.Epicenter.pages.*;
 import TanyaTestFoxtrot.pageObjects.TestInit;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -46,6 +44,14 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(homePage.footerCopywritingContainer().isDisplayed());
     }
 
+    public void login(){
+        HomePage homePage = new HomePage(driver);
+        LogInPage logInPage = new LogInPage(driver);
+        homePage.headerLoginContainer().click();
+        logInPage.inputLoginField().sendKeys("0671607348");
+        logInPage.inputPasswordField().sendKeys("Samsung1127_");
+        logInPage.submitButton().click();
+    }
 
     @Test
     public void testSelectCity() {
@@ -121,10 +127,7 @@ public class EpicenterTest extends TestInit {
         HomePage homePage = new HomePage(driver);
         LogInPage logInPage = new LogInPage(driver);
         homePage.goEpicenterHomePage();
-        homePage.headerLoginContainer().click();
-        logInPage.inputLoginField().sendKeys("0671607348");
-        logInPage.inputPasswordField().sendKeys("Samsung1127_");
-        logInPage.submitButton().click();
+        login();
         sleep(3);
         homePage.headerSearchField().sendKeys("electronics\n");
         ResultSearchElectronicsPage resultSearchPage = new ResultSearchElectronicsPage(driver);
@@ -138,11 +141,7 @@ public class EpicenterTest extends TestInit {
     public void delAllWish() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
-        LogInPage logInPage = new LogInPage(driver);
-        homePage.headerLoginContainer().click();
-        logInPage.inputLoginField().sendKeys("0671607348");
-        logInPage.inputPasswordField().sendKeys("Samsung1127_");
-        logInPage.submitButton().click();
+        login();
         LikePage likePage = new LikePage(driver);
         homePage.headerWhishesIcon().click();
         sleep(1);
@@ -156,6 +155,25 @@ public class EpicenterTest extends TestInit {
             sleep(1);
         }
         }
+
+    }
+
+    @Test
+    public void compareTest(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        homePage.headerSearchField().sendKeys("toy\n");
+        ResultSearchElectronicsPage resultSearchPage = new ResultSearchElectronicsPage(driver);
+        for (int i = 0; i < 2; i++) {
+            resultSearchPage.compareBtn().click();
+            sleep(1);
+        }
+        homePage.headerCompapareIcon().click();
+        ComparePage comparePage = new ComparePage(driver);
+        Assert.assertTrue(comparePage.compareBtn().isDisplayed());
+        comparePage.compareBtn().click();
+        sleep(2);
+        Assert.assertTrue(comparePage.compareContainer().isDisplayed());
 
     }
 }

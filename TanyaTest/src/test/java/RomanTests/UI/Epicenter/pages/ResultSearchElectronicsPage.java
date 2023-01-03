@@ -1,7 +1,6 @@
 package RomanTests.UI.Epicenter.pages;
 
 import TanyaTestFoxtrot.pageObjects.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -41,8 +40,11 @@ public class ResultSearchElectronicsPage extends BasePage {
         return findElementByXpath("//a[contains(@class, 'js-tooltip-top')]");
     }
 
-    public List<WebElement> compareBtn() {
+    public List<WebElement> compareBtns() {
         return findElementsByXpath("//a[contains(@onclick, 'compare')]");
+    }
+    public WebElement compareBtn() {
+        return findElementByXpath("//a[contains(@onclick, 'compare')]");
     }
 
     public WebElement microphoneSE7(){
