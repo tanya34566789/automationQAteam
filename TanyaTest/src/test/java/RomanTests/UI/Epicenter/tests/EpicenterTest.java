@@ -153,6 +153,19 @@ public class EpicenterTest extends TestInit {
 //            resultSearchElectronicsPageHelper.card().findElement((By) resultSearchElectronicsPage.microphoneSE7());
 //        }
 
+    @Test
+    public void compareMicrophones() {
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        homePage.headerSearchField().sendKeys("electronics\n");
+        ResultSearchElectronicsPage resultSearchPage = new ResultSearchElectronicsPage(driver);
+        for(int i = 0; i <resultSearchPage.cards().size(); i++){
+            if (resultSearchPage.cards().contains(resultSearchPage.microphoneSE7())){
+                System.out.println(resultSearchPage.cards());
+            }
+        }
+    }
+
     }
 
 
