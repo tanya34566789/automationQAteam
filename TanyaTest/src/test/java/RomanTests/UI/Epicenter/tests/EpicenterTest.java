@@ -3,6 +3,9 @@ package RomanTests.UI.Epicenter.tests;
 import RomanTests.UI.Epicenter.pages.*;
 import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -40,7 +43,6 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(homePage.footerSocialNetworksContainer().isDisplayed());
         Assert.assertTrue(homePage.footerInfoContainer().isDisplayed());
         Assert.assertTrue(homePage.footerCopywritingContainer().isDisplayed());
-        quit();
     }
 
 
@@ -71,7 +73,6 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(selectСityPage.getBrovaryCity().isDisplayed());
         selectСityPage.getBrovaryCity().click();
         selectСityPage.brovaryCityResultSearch().click();
-        quit();
     }
 
 
@@ -92,20 +93,17 @@ public class EpicenterTest extends TestInit {
 //        }else {
 //            System.out.println("login successful");
 //        }
-        quit();
         }
 
 
         @Test
         public void purshTest(){
-//            setUp();
             HomePage homePage = new HomePage(driver);
             homePage.goEpicenterHomePage();
-//            testLogIn(); не можна вставляти бо відкриває ще одне вікно
             homePage.headerSearchField().sendKeys("electronics\n");
             ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
 //            Assert.assertTrue(resultSearchElectronicsPage.freezerKS1100F().isDisplayed());
-            sleep(5);
+//            sleep(5);
 //            Assert.assertTrue(resultSearchElectronicsPage.element().isDisplayed());
 //            Assert.assertTrue(resultSearchElectronicsPage.termoreg().isDisplayed());
             resultSearchElectronicsPage.freezerKS1100F().click();
@@ -116,36 +114,46 @@ public class EpicenterTest extends TestInit {
             freezerPage.buyBtn().click();
             BasketPage basketPage = new BasketPage(driver);
             basketPage.numberOfBuyInput().clear();
-            basketPage.numberOfBuyInput().sendKeys("3");
-            basketPage.decreaseBtn()
+            basketPage.numberOfBuyInput().sendKeys("3\n");
+            sleep(3);
+            System.out.println(basketPage.totalSumOfPurchase().getText());
+            Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "17 997 ₴");
+            basketPage.purchaseBtn().click();
+
         }
+
+
+        @Test
+        public void mouseMove(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+            Actions builder = new Actions(driver);
+            Action moveAction = builder
+                    .scrollToElement(homePage.footerInfoContainer())
+                    .scrollToElement(homePage.headerLogo())
+                    .moveToElement(homePage.footerInfoContainer())
+                    .keyDown(homePage.headerSearchField(), Keys.SHIFT)
+                    .sendKeys(homePage.headerSearchField(), "ababagalamagama\n")
+                    .keyUp(homePage.headerSearchField(), Keys.SHIFT)
+                    .build();
+//            builder.perform();
+            sleep(4);
+        }
+
+
+        //filed test
+//        @Test
+//        public void cupsComparing(){
+//            HomePage homePage = new HomePage(driver);
+//            homePage.goEpicenterHomePage();
+//            homePage.headerSearchField().sendKeys("electronics\n");
+//            ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
+//            ResultSearchElectronicsPageHelper resultSearchElectronicsPageHelper = new ResultSearchElectronicsPageHelper(driver);
+////            resultSearchElectronicsPageHelper.checkMicrophonesList();
+//            resultSearchElectronicsPageHelper.card().findElement((By) resultSearchElectronicsPage.microphoneSE7());
+//        }
+
     }
 
-//    @Test
-//    public void checkBurgerMenuHeaderСatalogOfGoods (){
-//        HomePage homePage = new HomePage(driver);
-//        setUp();
-//        homePage.goEpicenterHomePage();
-//        homePage.headerСatalogGoods().click();
-//        Assert.assertTrue(homePage.headerСatalogGoodsMenu().isDisplayed());
-//        if (homePage.headerСatalogGoodsMenu().isDisplayed()){
-//            List<WebElement> allChildEl = homePage.headerСatalogGoodsMenu().findElements(By.xpath("*"));
-//            System.out.println(allChildEl.toString());
-//
-//        //    homePage.headerСatalogGoods().click();
-//        } else {
-//            System.out.print("headerСatalogGoodsMenu notDisplayed");
-//        }
-//    }
 
-//    @Test
-//    public void getSearchGunResault(){
-//        HomePage homePage = new HomePage(driver);
-//        setUp();
-//        homePage.goEpicenterHomePage();
-//        homePage.headerSearchField().sendKeys("Gun\n");
-//        ResultSearchGunPage resultSearchGunPage = new ResultSearchGunPage(driver);
-//        sleep(2);
-//        Assert.assertTrue(resultSearchGunPage.getElementsWithGunText().size() > 10);
-//    }
 

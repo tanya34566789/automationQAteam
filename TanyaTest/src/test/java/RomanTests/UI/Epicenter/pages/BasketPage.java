@@ -17,4 +17,17 @@ public class BasketPage extends BasePage {
     public WebElement numberOfBuyInput(){
         return findElementByXpath("//input[contains(@class, 'input form-quantity__input')]");
     }
+
+    public WebElement totalSumOfPurchase(){
+        return findElementByXpath("//span[contains(@class, 'send-sum--new')]");
+    }
+
+    public WebElement purchaseBtn (){
+        return findElementByXpath("//button[contains(@class, 'purchase-btn')]");
+    }
+
+    public boolean purshEndWebPage(){
+        driver.get("https://epicentrk.ua/ua/personal/order/make/");
+        return true;
+    }
 }

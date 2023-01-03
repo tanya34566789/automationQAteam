@@ -29,5 +29,28 @@ public class ResultSearchElectronicsPage extends BasePage {
         return findElementByXpath("(//a[contains(@class, 'btn--social-icon')])[1]");
    }
 
+    public List<WebElement> microphonesList(){
+
+        return findElementsByXpath("//span[contains(text(), 'Мікрофон')]/ancestor::div[contains(@class, 'card ')]");
+    }
+
+//    public List<WebElement> likeList() {
+//        return findElementsByXpath("//a[contains(@class, 'js-tooltip-top')]");
+//    }
+    public WebElement compareElByMicrophone() {
+        return findElementByXpath("//a[contains(@class, 'js-tooltip-top')]");
+    }
+
+    public List<WebElement> compareBtn() {
+        return findElementsByXpath("//a[contains(@onclick, 'compare')]");
+    }
+
+    public WebElement microphoneSE7(){
+        return findElementByXpath("//*[contains(text(), 'sE7')]");
+    }
+
+    public WebElement card(){
+        return findElementByXpath("//div[contains(@class, 'card ')]");
+    }
 
 }
