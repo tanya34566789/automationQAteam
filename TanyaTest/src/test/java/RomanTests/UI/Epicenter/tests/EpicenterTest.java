@@ -4,6 +4,7 @@ import RomanTests.UI.Epicenter.pages.*;
 import TanyaTestFoxtrot.pageObjects.TestInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 public class EpicenterTest extends TestInit {
 
     @Test
-    public void checkHomePageElements(){
+    public void checkHomePageElements() {
 
         HomePage homePage = new HomePage(driver);
         setUp();
@@ -47,12 +48,12 @@ public class EpicenterTest extends TestInit {
 
 
     @Test
-    public void testSelectCity(){
+    public void testSelectCity() {
         HomePage homePage = new HomePage(driver);
         SelectСityPage selectСityPage = new SelectСityPage(driver);
         setUp();
         homePage.goEpicenterHomePage();
-        if(homePage.headerMiniModalButtonYes().isDisplayed()){
+        if (homePage.headerMiniModalButtonYes().isDisplayed()) {
             homePage.headerMiniModalButtonYes().click();
         }
         homePage.headerLocationsDiv().click();
@@ -66,60 +67,76 @@ public class EpicenterTest extends TestInit {
 
 
     @Test
-    public void testLogIn(){
+    public void testLogIn() {
         HomePage homePage = new HomePage(driver);
         LogInPage logInPage = new LogInPage(driver);
-        setUp();
         homePage.goEpicenterHomePage();
         homePage.headerLoginContainer().click();
         logInPage.inputLoginField().sendKeys("0671607348");
         logInPage.inputPasswordField().sendKeys("Samsung1127_");
         logInPage.submitButton().click();
-        }
+    }
 
 
-        @Test
-        public void purshTest(){
-            HomePage homePage = new HomePage(driver);
-            homePage.goEpicenterHomePage();
-            homePage.headerSearchField().sendKeys("electronics\n");
-            ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
-            resultSearchElectronicsPage.freezerKS1100F().click();
-            FreezerPageHelper freezerPageHelper = new FreezerPageHelper(driver);
-            FreezerPage freezerPage = new FreezerPage(driver);
-            freezerPageHelper.checkPrice();
-            freezerPage.buyBtn().click();
-            BasketPage basketPage = new BasketPage(driver);
-            basketPage.numberOfBuyInput().clear();
-            basketPage.numberOfBuyInput().sendKeys("3\n");
-            sleep(3);
-            System.out.println(basketPage.totalSumOfPurchase().getText());
-            Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "17 997 ₴");
-            basketPage.purchaseBtn().click();
-
-        }
-
-
-        @Test
-        public void mouseMove(){
+    @Test
+    public void purshTest() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
-            Actions builder = new Actions(driver);
-            Action moveAction = builder
-                    .scrollToElement(homePage.footerInfoContainer())
-                    .scrollToElement(homePage.headerLogo())
-                    .moveToElement(homePage.footerInfoContainer())
-                    .keyDown(homePage.headerSearchField(), Keys.SHIFT)
-                    .sendKeys(homePage.headerSearchField(), "ababagalamagama\n")
-                    .keyUp(homePage.headerSearchField(), Keys.SHIFT)
-                    .build();
-            sleep(4);
-        }
-
-
-
+        homePage.headerSearchField().sendKeys("electronics\n");
+        ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
+        resultSearchElectronicsPage.freezerKS1100F().click();
+        FreezerPageHelper freezerPageHelper = new FreezerPageHelper(driver);
+        FreezerPage freezerPage = new FreezerPage(driver);
+        freezerPageHelper.checkPrice();
+        freezerPage.buyBtn().click();
+        BasketPage basketPage = new BasketPage(driver);
+        basketPage.numberOfBuyInput().clear();
+        basketPage.numberOfBuyInput().sendKeys("3\n");
+        sleep(3);
+        System.out.println(basketPage.totalSumOfPurchase().getText());
+        Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "17 997 ₴");
+        basketPage.purchaseBtn().click();
 
     }
+
+
+    @Test
+    public void mouseMove() {
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        Actions builder = new Actions(driver);
+        Action moveAction = builder
+                .scrollToElement(homePage.footerInfoContainer())
+                .scrollToElement(homePage.headerLogo())
+                .moveToElement(homePage.footerInfoContainer())
+                .keyDown(homePage.headerSearchField(), Keys.SHIFT)
+                .sendKeys(homePage.headerSearchField(), "ababagalamagama\n")
+                .keyUp(homePage.headerSearchField(), Keys.SHIFT)
+                .build();
+        sleep(4);
+    }
+
+    @Test
+    public void likeAllResults() {
+        HomePage homePage = new HomePage(driver);
+        LogInPage logInPage = new LogInPage(driver);
+        homePage.goEpicenterHomePage();
+        homePage.headerLoginContainer().click();
+        logInPage.inputLoginField().sendKeys("0671607348");
+        logInPage.inputPasswordField().sendKeys("Samsung1127_");
+        logInPage.submitButton().click();
+        sleep(3);
+        homePage.headerSearchField().sendKeys("electronics\n");
+        ResultSearchElectronicsPage resultSearchPage = new ResultSearchElectronicsPage(driver);
+        sleep(2);
+        for (WebElement like : resultSearchPage.likeList()) {
+            like.click();
+        }
+
+    }
+
+
+}
 
 
 
