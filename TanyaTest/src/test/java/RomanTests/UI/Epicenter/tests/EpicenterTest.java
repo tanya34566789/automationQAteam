@@ -132,10 +132,32 @@ public class EpicenterTest extends TestInit {
         for (WebElement like : resultSearchPage.likeList()) {
             like.click();
         }
-
     }
 
+    @Test
+    public void delAllWish() {
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        LogInPage logInPage = new LogInPage(driver);
+        homePage.headerLoginContainer().click();
+        logInPage.inputLoginField().sendKeys("0671607348");
+        logInPage.inputPasswordField().sendKeys("Samsung1127_");
+        logInPage.submitButton().click();
+        LikePage likePage = new LikePage(driver);
+        homePage.headerWhishesIcon().click();
+        sleep(1);
 
+        if(likePage.emptyWish().isDisplayed()){
+            System.out.println("wish list is empty");
+        } else {
+            sleep(1);
+            for (WebElement delBtn: likePage.delWiwhs()) {
+            delBtn.click();
+            sleep(1);
+        }
+        }
+
+    }
 }
 
 
