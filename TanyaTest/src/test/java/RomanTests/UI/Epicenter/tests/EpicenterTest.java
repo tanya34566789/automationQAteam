@@ -211,6 +211,11 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(homePage.saleCatalogItem().isDisplayed());
         homePage.saleCatalogItem().click();
     }
+
+    @Test
+    public void testForTesting(){
+        int i = 20;
+    }
 }
 
 
