@@ -212,10 +212,7 @@ public class EpicenterTest extends TestInit {
         homePage.saleCatalogItem().click();
     }
 
-    @Test
-    public void testForTesting(){
-        int i = 20;
-    }
+
 }
 
 
