@@ -2,6 +2,7 @@ package RomanTests.UI.Epicenter.tests;
 
 import RomanTests.UI.Epicenter.pages.*;
 import TanyaTestFoxtrot.pageObjects.TestInit;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -175,6 +176,25 @@ public class EpicenterTest extends TestInit {
         sleep(2);
         Assert.assertTrue(comparePage.compareContainer().isDisplayed());
 
+    }
+
+
+    @Test
+    public void checkScheduleOfHolidays(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        Assert.assertTrue(homePage.scheduleOfHolidaysBtn().isDisplayed());
+        homePage.scheduleOfHolidaysBtn().click();
+        ScheduleOfHolidaysPage scheduleOfHolidaysPage = new ScheduleOfHolidaysPage(driver);
+        Assert.assertTrue(scheduleOfHolidaysPage.showOnlyEpicenterShopBtn().isDisplayed());
+        scheduleOfHolidaysPage.showOnlyEpicenterShopBtn().click();
+        for (WebElement EpicenterShop: scheduleOfHolidaysPage.allEpicentersOfUkraine()) {
+            for (WebElement EpicenterAdress: scheduleOfHolidaysPage.allAddressesOfEpicenters()) {
+                Assert.assertTrue(EpicenterAdress.isDisplayed());
+            }
+        }
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,10000)");
     }
 }
 
