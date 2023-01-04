@@ -26,6 +26,10 @@ public class HomePage extends BasePage {
         return findElementByXpath("//div[contains(@class, 'header__locations')]/div[contains(@class, 'header__locations-opener')]");
     }
 
+    public WebElement scheduleOfHolidaysBtn (){
+        return findElementByXpath("//img[contains(@alt, 'holiday')]");
+    }
+
     // HEADER mini modal window, select your location
     public WebElement headerMiniModalButtonYes(){
         return findElementByXpath("//button[contains(@class, '_DE7oBo')]");
