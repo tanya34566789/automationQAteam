@@ -196,6 +196,21 @@ public class EpicenterTest extends TestInit {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,10000)");
     }
+
+    @Test
+    public void checkHomePageClickCatalog(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        Assert.assertTrue(homePage.headerСatalogGoods().isDisplayed());
+        homePage.headerСatalogGoods().click();
+        Actions actions = new Actions(driver);
+        for (WebElement hedaerCatalogItem: homePage.headerCatalogItems()) {
+            actions.moveToElement(hedaerCatalogItem).perform();
+            sleep(1);
+        }
+        Assert.assertTrue(homePage.saleCatalogItem().isDisplayed());
+        homePage.saleCatalogItem().click();
+    }
 }
 
 
