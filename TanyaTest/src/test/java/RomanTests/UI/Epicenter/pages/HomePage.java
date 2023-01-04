@@ -4,6 +4,8 @@ import TanyaTestFoxtrot.pageObjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
@@ -44,10 +46,18 @@ public class HomePage extends BasePage {
     }
 
     public WebElement headerСatalogGoods(){
-        return findElementByXpath("//div[contains(@class, 'header__row center-v')]/div[contains(@class, 'header__menu-opener')]");
+        return findElementByXpath("//div[contains(@class, 'header__row')]/div[contains(@class, 'header__menu-opener')]");
     }
     public WebElement headerСatalogGoodsMenu(){
-        return findElementByXpath("//div[contains(@class, 'header__navigation')]/ul[contains(@class, 'catalog-menu')]");
+        return findElementByXpath("//ul[contains(@class, 'catalog-menu__category')]");
+    }
+
+    public List<WebElement> headerCatalogItems(){
+        return findElementsByXpath("//li[contains(@class, 'catalog-menu__level-1')]");
+    }
+
+    public WebElement saleCatalogItem(){
+        return findElementByXpath("//li[contains(@class, 'main-nav__item--sale')]");
     }
 
 
