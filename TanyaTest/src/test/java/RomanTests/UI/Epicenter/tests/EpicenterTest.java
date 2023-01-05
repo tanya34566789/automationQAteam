@@ -226,7 +226,6 @@ public class EpicenterTest extends TestInit {
         for (WebElement actualItem: salePage.actualItems()) {
             Assert.assertTrue(actualItem.isDisplayed());
         }
-
     }
 }
 
