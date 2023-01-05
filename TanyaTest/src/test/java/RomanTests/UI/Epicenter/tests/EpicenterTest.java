@@ -213,8 +213,20 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void testForTesting(){
-        int i = 20;
+    public void actualSaleCapacity(){
+        SalePage salePage = new SalePage(driver);
+        salePage.goSalePage();
+        Assert.assertTrue(salePage.actualBtn().isDisplayed());
+        Assert.assertTrue(salePage.archiveBtn().isDisplayed());
+        salePage.actualBtn().click();
+        for (WebElement actualItem: salePage.actualItems()) {
+            Assert.assertTrue(actualItem.isDisplayed());
+        }
+        salePage.archiveBtn().click();
+        for (WebElement actualItem: salePage.actualItems()) {
+            Assert.assertTrue(actualItem.isDisplayed());
+        }
+
     }
 }
 
