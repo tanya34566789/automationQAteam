@@ -14,6 +14,10 @@ public class BasketPage extends BasePage {
         return findElementByXpath("    //button[contains(@class, 'decrease')]() {}");
     }
 
+    public WebElement addBtn(){
+        return findElementByXpath("//button[contains(text(), '+')]");
+    }
+
     public WebElement numberOfBuyInput(){
         return findElementByXpath("//input[contains(@class, 'input form-quantity__input')]");
     }
