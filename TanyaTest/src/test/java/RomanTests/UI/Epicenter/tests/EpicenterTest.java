@@ -45,7 +45,7 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(homePage.footerCopywritingContainer().isDisplayed());
     }
 
-    public void login(){
+    public void login() {
         HomePage homePage = new HomePage(driver);
         LogInPage logInPage = new LogInPage(driver);
         homePage.headerLoginContainer().click();
@@ -147,20 +147,20 @@ public class EpicenterTest extends TestInit {
         homePage.headerWhishesIcon().click();
         sleep(1);
 
-        if(likePage.emptyWish().isDisplayed()){
+        if (likePage.emptyWish().isDisplayed()) {
             System.out.println("wish list is empty");
         } else {
             sleep(1);
-            for (WebElement delBtn: likePage.delWiwhs()) {
-            delBtn.click();
-            sleep(1);
-        }
+            for (WebElement delBtn : likePage.delWiwhs()) {
+                delBtn.click();
+                sleep(1);
+            }
         }
 
     }
 
     @Test
-    public void compareTest(){
+    public void compareTest() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
         homePage.headerSearchField().sendKeys("toy\n");
@@ -180,7 +180,7 @@ public class EpicenterTest extends TestInit {
 
 
     @Test
-    public void checkScheduleOfHolidays(){
+    public void checkScheduleOfHolidays() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
         Assert.assertTrue(homePage.scheduleOfHolidaysBtn().isDisplayed());
@@ -188,8 +188,8 @@ public class EpicenterTest extends TestInit {
         ScheduleOfHolidaysPage scheduleOfHolidaysPage = new ScheduleOfHolidaysPage(driver);
         Assert.assertTrue(scheduleOfHolidaysPage.showOnlyEpicenterShopBtn().isDisplayed());
         scheduleOfHolidaysPage.showOnlyEpicenterShopBtn().click();
-        for (WebElement EpicenterShop: scheduleOfHolidaysPage.allEpicentersOfUkraine()) {
-            for (WebElement EpicenterAdress: scheduleOfHolidaysPage.allAddressesOfEpicenters()) {
+        for (WebElement EpicenterShop : scheduleOfHolidaysPage.allEpicentersOfUkraine()) {
+            for (WebElement EpicenterAdress : scheduleOfHolidaysPage.allAddressesOfEpicenters()) {
                 Assert.assertTrue(EpicenterAdress.isDisplayed());
             }
         }
@@ -198,13 +198,13 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void checkHomePageClickCatalog(){
+    public void checkHomePageClickCatalog() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
         Assert.assertTrue(homePage.headerСatalogGoods().isDisplayed());
         homePage.headerСatalogGoods().click();
         Actions actions = new Actions(driver);
-        for (WebElement hedaerCatalogItem: homePage.headerCatalogItems()) {
+        for (WebElement hedaerCatalogItem : homePage.headerCatalogItems()) {
             actions.moveToElement(hedaerCatalogItem).perform();
             sleep(1);
         }
@@ -213,20 +213,63 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void actualSaleCapacity(){
+    public void actualSaleCapacity() {
         SalePage salePage = new SalePage(driver);
         salePage.goSalePage();
+
         Assert.assertTrue(salePage.actualBtn().isDisplayed());
         Assert.assertTrue(salePage.archiveBtn().isDisplayed());
+
         salePage.actualBtn().click();
-        for (WebElement actualItem: salePage.actualItems()) {
+
+        for (WebElement actualItem : salePage.actualItems()) {
             Assert.assertTrue(actualItem.isDisplayed());
         }
+
         salePage.archiveBtn().click();
-        for (WebElement actualItem: salePage.actualItems()) {
+
+        for (WebElement actualItem : salePage.actualItems()) {
             Assert.assertTrue(actualItem.isDisplayed());
         }
     }
+
+    //check when the internet will be available
+    @Test
+    public void buyAndDel() {
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+        homePage.headerSearchField().sendKeys("electronics\n");
+        ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
+
+        resultSearchElectronicsPage.cards().get(1).click();
+
+        FreezerPage freezerPage = new FreezerPage(driver);
+
+        freezerPage.buyBtn().click();
+
+        BasketPage basketPage = new BasketPage(driver);
+
+        int purshNum = 4;
+
+        for (int i = 1; i < purshNum; i++) {
+            basketPage.addBtn().click();
+            sleep(3);
+            System.out.println(basketPage.numberOfBuyInput().getAttribute("value"));
+        }
+        sleep(4);
+
+        Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "23 996 ₴");
+
+        for (int i = 1; i < purshNum; i++) {
+            basketPage.decreaseBtn().click();
+            sleep(3);
+            System.out.println(basketPage.numberOfBuyInput().getAttribute("value"));
+        }
+
+        Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "5 999 ₴");
+    }
+
+
 }
 
 
