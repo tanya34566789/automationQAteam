@@ -4,6 +4,8 @@ import TanyaTestFoxtrot.pageObjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class BasketPage extends BasePage {
     public BasketPage(WebDriver driver) {
         super(driver);
@@ -37,5 +39,8 @@ public class BasketPage extends BasePage {
 
     public WebElement continuePursh(){
         return findElementByXpath("//button[contains(@class, 'btn--3')]");
+    }
+    public List<WebElement> continuePurshBtns(){
+        return findElementsByXpath("//button[contains(@class, 'btn--3')]");
     }
 }

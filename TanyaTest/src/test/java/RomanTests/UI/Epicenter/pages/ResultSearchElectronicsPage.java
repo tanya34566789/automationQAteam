@@ -55,9 +55,9 @@ public class ResultSearchElectronicsPage extends BasePage {
         return findElementsByXpath("//div[contains(@class, 'card ')]");
     }
 
-//    public List<WebElement> byBtnsYellow(){
-//        return findElementsByXpath("//button[contains(@class, 'js-btn--buy')]");
-//    }
+    public List<WebElement> byBtnsYellow(){
+        return findElementsByXpath("//button[contains(@class, 'js-btn--buy')]");
+    }
 
     public WebElement byBtnYellow(){
         return findElementByXpath("//button[contains(@class, 'js-btn--buy')]");
