@@ -32,6 +32,14 @@ public class HomePage extends BasePage {
         return findElementByXpath("//img[contains(@alt, 'holiday')]");
     }
 
+    public WebElement sliderNextBtn(){
+        return findElementByXpath("//div[contains(@class, 'swiper-button-next')]");
+    }
+
+    public WebElement sliderPreviousBtn(){
+        return findElementByXpath("//div[contains(@class, 'swiper-button-prev')]");
+    }
+
     // HEADER mini modal window, select your location
     public WebElement headerMiniModalButtonYes(){
         return findElementByXpath("//button[contains(@class, '_DE7oBo')]");
