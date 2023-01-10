@@ -312,6 +312,43 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(homePage.mainAdvertisingSlider().isDisplayed());
     }
 
+    @Test
+    public void checkPrimitiveFilterByCompass(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        homePage.compassLink().click();
+
+        CompassPage compassPage = new CompassPage(driver);
+
+        for (WebElement filterBtn: compassPage.allFiltersBtns()) {
+            filterBtn.click();
+            sleep(4);
+            for (WebElement cardBox: compassPage.cardBoxes()) {
+                Assert.assertTrue(cardBox.isDisplayed());
+            }
+        }
+
+        Assert.assertTrue(compassPage.filterHidden().isDisplayed());
+
+        String filterClasses = compassPage.filterWrapper().getAttribute("class");
+
+
+        // don't know how to do
+//        for (String filterClas: filterClasses.split(" ")) {
+//                if(filterClas.equals("non-active")){
+//                    compassPage.filterHidden().click();
+//                    System.out.println("click");
+//                }else {
+//                    Assert.assertTrue(filterClas.equals("non-active"));
+//                    System.out.println("not click");
+//                }
+//        }
+
+    }
+
+
+
 
 }
 
