@@ -11,7 +11,7 @@ public class BasketPage extends BasePage {
 
 
     public WebElement decreaseBtn(){
-        return findElementByXpath("    //button[contains(@class, 'decrease')]() {}");
+        return findElementByXpath("//button[contains(@class, 'decrease')]");
     }
 
     public WebElement addBtn(){
@@ -33,5 +33,9 @@ public class BasketPage extends BasePage {
     public boolean purshEndWebPage(){
         driver.get("https://epicentrk.ua/ua/personal/order/make/");
         return true;
+    }
+
+    public WebElement continuePursh(){
+        return findElementByXpath("//button[contains(@class, 'btn--3')]");
     }
 }

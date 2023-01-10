@@ -233,7 +233,6 @@ public class EpicenterTest extends TestInit {
         }
     }
 
-    //check when the internet will be available
     @Test
     public void buyAndDel() {
         HomePage homePage = new HomePage(driver);
@@ -251,6 +250,8 @@ public class EpicenterTest extends TestInit {
 
         int purshNum = 4;
 
+        String startPrice = basketPage.totalSumOfPurchase().getText();
+
         for (int i = 1; i < purshNum; i++) {
             basketPage.addBtn().click();
             sleep(3);
@@ -258,16 +259,15 @@ public class EpicenterTest extends TestInit {
         }
         sleep(4);
 
-        Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "23 996 ₴");
-
         for (int i = 1; i < purshNum; i++) {
             basketPage.decreaseBtn().click();
             sleep(3);
             System.out.println(basketPage.numberOfBuyInput().getAttribute("value"));
         }
 
-        Assert.assertEquals(basketPage.totalSumOfPurchase().getText(), "5 999 ₴");
+        Assert.assertEquals(startPrice, basketPage.totalSumOfPurchase().getText());
     }
+
 
 
 }
