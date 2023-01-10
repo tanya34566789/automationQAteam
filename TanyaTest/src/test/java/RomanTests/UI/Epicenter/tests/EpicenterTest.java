@@ -293,6 +293,25 @@ public class EpicenterTest extends TestInit {
 
     }
 
+    @Test
+    public void sliderHomePageTest(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        Assert.assertTrue(homePage.mainAdvertisingSlider().isDisplayed());
+
+        for (int i = 0; i < 5; i++) {
+            homePage.sliderNextBtn().click();
+            sleep(1);
+        }
+        for (int i = 0; i < 5; i++) {
+            homePage.sliderPreviousBtn().click();
+            sleep(1);
+        }
+
+        Assert.assertTrue(homePage.mainAdvertisingSlider().isDisplayed());
+    }
+
 
 }
 
