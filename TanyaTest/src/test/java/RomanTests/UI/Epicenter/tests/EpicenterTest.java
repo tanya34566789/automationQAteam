@@ -268,6 +268,30 @@ public class EpicenterTest extends TestInit {
         Assert.assertEquals(startPrice, basketPage.totalSumOfPurchase().getText());
     }
 
+    //filed test to redo
+    @Test
+    public void deleteAllGoodsFromBasket(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        homePage.headerSearchField().sendKeys("electronics\n");
+
+        ResultSearchElectronicsPage resultSearchElectronicsPage = new ResultSearchElectronicsPage(driver);
+
+        Actions actions = new Actions(driver);
+
+        BasketPage basketPage = new BasketPage(driver);
+
+        for (WebElement card: resultSearchElectronicsPage.cards()) {
+            for (WebElement byBtn: resultSearchElectronicsPage.byBtnsYellow()) {
+                actions.moveToElement(byBtn).click();
+                sleep(1);
+                basketPage.continuePursh().click();
+                sleep(1);
+            }
+        }
+
+    }
 
 
 }
