@@ -350,6 +350,9 @@ public class EpicenterTest extends TestInit {
 
     @Test
     public void filtersParamsTest(){
+        //how to do test without sleep method ?
+
+
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -395,7 +398,7 @@ public class EpicenterTest extends TestInit {
         sleep(3);
         Assert.assertTrue(compassPage.cardBoxes().size() > 5);
 
-        //how to do test without sleep method ?
+
     }
 
 
