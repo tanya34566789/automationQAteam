@@ -116,6 +116,10 @@ public class HomePage extends BasePage {
         return findElementByXpath("//div[contains(@class, 'seo-container')]");
     }
 
+    public WebElement compassLink(){
+        return findElementByXpath("//ul[contains(@id, 'menuContainer_15')]//a[contains(@href, 'kompasy')]");
+    }
+
     //FOOTER
 
     public WebElement footerSocialNetworksContainer(){
