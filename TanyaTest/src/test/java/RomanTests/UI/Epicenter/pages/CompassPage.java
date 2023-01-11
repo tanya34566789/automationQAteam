@@ -52,4 +52,49 @@ public class CompassPage extends BasePage {
         return findElementByXpath("//div[contains(@id, 'filter-wrapper')]");
     }
 
+    //FILTER elements
+
+    public WebElement minPriceInput(){
+        return findElementByXpath("//input[contains(@class, 'min-price')]");
+    }
+    public WebElement maxPriceInput(){
+        return findElementByXpath("//input[contains(@class, 'max-price')]");
+    }
+
+    public WebElement checkBoxEpicenter(){
+        return findElementByXpath("//input[contains(@data-filter-element, 'epicentr')]/parent::label");
+    }
+
+    public WebElement checkBoxAceCamp(){
+        return findElementByXpath("//input[contains(@data-filter-element, 'AceCamp')]/parent::label");
+    }
+
+    public WebElement checkBoxAceMFH(){
+        return findElementByXpath("//input[contains(@data-filter-element, 'MFH')]/parent::label");
+    }
+
+    public WebElement checkBoxOther(){
+        return findElementByXpath("//input[contains(@data-filter-element, 'other')]/parent::label");
+    }
+
+    public WebElement checkBoxLiquidless(){
+        return findElementByXpath("//input[contains(@data-filter-element, '6tAGV4M3XhfStkGf')]/parent::label");
+    }
+
+    public WebElement checkBoxWeight(){
+        return findElementByXpath("//input[contains(@data-filter-element, '100.0000')]/parent::label");
+    }
+
+    public WebElement showMoreFilterBtn(){
+        return findElementByXpath("//button[contains(@class, 'filter-block__more')]");
+    }
+
+
+    public WebElement clearAllFilterBtn(){
+        return findElementByXpath("//div[contains(@class, 'uncheck-all')]");
+    }
+
+
+
+
 }

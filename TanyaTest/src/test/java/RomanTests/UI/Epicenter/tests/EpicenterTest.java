@@ -348,6 +348,58 @@ public class EpicenterTest extends TestInit {
     }
 
 
+    @Test
+    public void filtersParamsTest(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        homePage.compassLink().click();
+
+        CompassPage compassPage = new CompassPage(driver);
+        compassPage.minPriceInput().clear();
+        compassPage.minPriceInput().sendKeys("1\n");
+        sleep(2);
+//        Assert.assertEquals(compassPage.minPriceInput().getAttribute("value"), "39");
+
+        compassPage.maxPriceInput().clear();
+        compassPage.maxPriceInput().sendKeys("20000\n");
+
+        sleep(2);
+//        Assert.assertEquals(compassPage.maxPriceInput().getAttribute("value"), "2872");
+
+        Assert.assertTrue(compassPage.cardBoxes().size() > 5);
+        sleep(3);
+
+        compassPage.checkBoxEpicenter().click();
+
+        CompasPageHelper compasPageHelper = new CompasPageHelper(driver);
+
+        compasPageHelper.checkIsDisplayedCardBoxes();
+
+        compassPage.checkBoxOther().click();
+
+        compasPageHelper.checkIsDisplayedCardBoxes();
+
+        sleep(2);
+        compassPage.checkBoxAceCamp().click();
+        sleep(2);
+        compassPage.checkBoxAceMFH().click();
+
+        compasPageHelper.checkIsDisplayedCardBoxes();
+
+        compassPage.checkBoxLiquidless().click();
+
+        Assert.assertTrue(compassPage.clearAllFilterBtn().isDisplayed());
+        sleep(3);
+        compassPage.clearAllFilterBtn().click();
+        sleep(3);
+        Assert.assertTrue(compassPage.cardBoxes().size() > 5);
+
+        //how to do test without sleep method ?
+    }
+
+
+
 
 
 }
