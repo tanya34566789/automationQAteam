@@ -397,10 +397,43 @@ public class EpicenterTest extends TestInit {
         compassPage.clearAllFilterBtn().click();
         sleep(3);
         Assert.assertTrue(compassPage.cardBoxes().size() > 5);
-
-
     }
 
+    //have a problam with test
+    @Test
+    public void checkIsFeedbackMenuDisplayed(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        homePage.footerSendMassageToEpicenter().click();
+
+        FeedbackPage feedbackPage = new FeedbackPage(driver);
+
+        Assert.assertTrue(feedbackPage.feedbackContainer().isDisplayed());
+
+        feedbackPage.nameFieldInput().sendKeys("name");
+
+        feedbackPage.phoneNumberFieldInput().sendKeys("ddfffdeee\n");
+
+        Assert.assertEquals("+380", feedbackPage.phoneNumberFieldInput().getAttribute("value"));
+
+        feedbackPage.phoneNumberFieldInput().sendKeys("+_-*?:%;№\n");
+
+        Assert.assertEquals("+380", feedbackPage.phoneNumberFieldInput().getAttribute("value"));
+
+        feedbackPage.phoneNumberFieldInput().sendKeys("671697474\n");
+
+        Assert.assertEquals("+380671697474", feedbackPage.phoneNumberFieldInput().getAttribute("value"));
+
+        feedbackPage.emailFieldInput().sendKeys("SamSmith@gmail.com\n");
+
+        Actions actions = new Actions(driver);
+
+        actions.moveToElement(feedbackPage.typeOfAppealBox());
+//        feedbackPage.typeOfAppealBox().click();
+
+        Assert.assertTrue(feedbackPage.RequestContentContainer().isDisplayed());
+    }
 
 
 
