@@ -492,6 +492,48 @@ public class EpicenterTest extends TestInit {
         }
     }
 
+    @Test
+    public void checkVacancies(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        homePage.headerInfoDiv().click();
+
+        Assert.assertTrue(homePage.headerInfoDivContentBox().isDisplayed());
+
+        homePage.headerInfoDivVacancies().click();
+
+        VacanciesPage vacanciesPage = new VacanciesPage(driver);
+
+        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+            Assert.assertTrue(vacationLink.isDisplayed());
+        }
+
+
+        vacanciesPage.citySelect().click();
+        vacanciesPage.selectOnePosition().click();
+
+        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+            Assert.assertTrue(vacationLink.isDisplayed());
+        }
+
+        vacanciesPage.locationSelect().click();
+        vacanciesPage.selectOnePosition().click();
+
+        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+            Assert.assertTrue(vacationLink.isDisplayed());
+        }
+
+        vacanciesPage.vacationSelect().click();
+        vacanciesPage.selectOnePosition().click();
+
+        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+            Assert.assertTrue(vacationLink.isDisplayed());
+        }
+
+
+    }
+
 }
 
 

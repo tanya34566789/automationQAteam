@@ -49,6 +49,15 @@ public class HomePage extends BasePage {
         return findElementByXpath("//div[contains(@class, 'header__info-menu')]/div[contains(@class, 'header__info-toggle')]");
     }
 
+    public WebElement headerInfoDivContentBox(){
+        return findElementByXpath("//div[contains(@class, 'header__info-menu')]/div[contains(@class, 'header__info-toggle')]");
+    }
+
+    public WebElement headerInfoDivVacancies(){
+        return findElementByXpath("//div[contains(@class, 'header__info-list')]/a[contains(@href, '/vakansyy/')]");
+    }
+
+
     public WebElement headerProfitLink(){
         return findElementByXpath("//ul[contains(@class, 'header__service-menu-list')]/li/a");
     }
