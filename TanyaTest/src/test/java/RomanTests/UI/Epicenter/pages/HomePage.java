@@ -143,6 +143,9 @@ public class HomePage extends BasePage {
         return findElementByXpath("//a[contains(@href, '/seller/')]");
     }
 
+    public WebElement footerNews(){
+        return findElementByXpath("//nav[contains(@id, 'info-footer')]/a[contains(@href, '/news/')]");
+    }
 
 
 

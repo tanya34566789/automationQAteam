@@ -270,7 +270,7 @@ public class EpicenterTest extends TestInit {
 
     //filed test to redo
     @Test
-    public void deleteAllGoodsFromBasket(){
+    public void deleteAllGoodsFromBasket() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -282,8 +282,8 @@ public class EpicenterTest extends TestInit {
 
         BasketPage basketPage = new BasketPage(driver);
 
-        for (WebElement card: resultSearchElectronicsPage.cards()) {
-            for (WebElement byBtn: resultSearchElectronicsPage.byBtnsYellow()) {
+        for (WebElement card : resultSearchElectronicsPage.cards()) {
+            for (WebElement byBtn : resultSearchElectronicsPage.byBtnsYellow()) {
                 actions.moveToElement(byBtn).click();
                 sleep(1);
                 basketPage.continuePursh().click();
@@ -294,7 +294,7 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void sliderHomePageTest(){
+    public void sliderHomePageTest() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -313,7 +313,7 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void checkPrimitiveFilterByCompass(){
+    public void checkPrimitiveFilterByCompass() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -321,10 +321,10 @@ public class EpicenterTest extends TestInit {
 
         CompassPage compassPage = new CompassPage(driver);
 
-        for (WebElement filterBtn: compassPage.allFiltersBtns()) {
+        for (WebElement filterBtn : compassPage.allFiltersBtns()) {
             filterBtn.click();
             sleep(4);
-            for (WebElement cardBox: compassPage.cardBoxes()) {
+            for (WebElement cardBox : compassPage.cardBoxes()) {
                 Assert.assertTrue(cardBox.isDisplayed());
             }
         }
@@ -349,7 +349,7 @@ public class EpicenterTest extends TestInit {
 
 
     @Test
-    public void filtersParamsTest(){
+    public void filtersParamsTest() {
         //how to do test without sleep method ?
 
 
@@ -401,7 +401,7 @@ public class EpicenterTest extends TestInit {
 
     //have a problam with test
     @Test
-    public void checkIsFeedbackMenuDisplayed(){
+    public void checkIsFeedbackMenuDisplayed() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -436,7 +436,7 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void sellerRegistrationTest(){
+    public void sellerRegistrationTest() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -462,6 +462,34 @@ public class EpicenterTest extends TestInit {
         sellerRegistrationPage.closeMenuBtn().click();
         sellerRegistrationPage.fillOutAnApplicationBtn().click();
         sellerRegistrationPageHelper.isAllFieldsIsNotEmpty();
+    }
+
+    @Test
+    public void checkNews() {
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
+
+        homePage.footerNews().click();
+
+        NewsPage newsPage = new NewsPage(driver);
+
+        for (WebElement newsCard : newsPage.newsCards()) {
+            Assert.assertTrue(newsCard.isDisplayed());
+        }
+
+        newsPage.firstNewsTopic().click();
+        Assert.assertTrue(newsPage.newsTopic().isDisplayed());
+
+        newsPage.backToNewsPage().click();
+
+        for (int i = 0; i < newsPage.pageNumbers().size(); i++) {
+            newsPage.pageNumbers().get(i).click();
+            sleep(1);
+
+            for (WebElement newsCard : newsPage.newsCards()) {
+                Assert.assertTrue(newsCard.isDisplayed());
+            }
+        }
     }
 
 }
