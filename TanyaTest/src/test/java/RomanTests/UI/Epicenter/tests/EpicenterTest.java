@@ -435,8 +435,34 @@ public class EpicenterTest extends TestInit {
         Assert.assertTrue(feedbackPage.RequestContentContainer().isDisplayed());
     }
 
+    @Test
+    public void sellerRegistrationTest(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goEpicenterHomePage();
 
+        homePage.footerStartSellInEpicenter().click();
 
+        SellerRegistrationPage sellerRegistrationPage = new SellerRegistrationPage(driver);
+
+        sellerRegistrationPage.fillOutAnApplicationBtn().click();
+
+        Assert.assertTrue(sellerRegistrationPage.registrationSideMenu().isDisplayed());
+
+        sellerRegistrationPage.nameCompanyInput().sendKeys("My Company\n");
+        sellerRegistrationPage.personalNameInput().sendKeys("I am\n");
+        sellerRegistrationPage.phoneNumberInput().sendKeys("80964444444");
+        sellerRegistrationPage.emailInput().sendKeys("gorgy@gmail.com\n");
+        sellerRegistrationPage.personalWebAddress().sendKeys("kokimiki.com");
+        sellerRegistrationPage.typesOfGoodsInput().sendKeys("kaki makaki bukaki lunaki");
+        sellerRegistrationPage.textArea().sendKeys("send massage in the shop");
+
+        SellerRegistrationPageHelper sellerRegistrationPageHelper = new SellerRegistrationPageHelper(driver);
+
+        sellerRegistrationPageHelper.isAllFieldsIsNotEmpty();
+        sellerRegistrationPage.closeMenuBtn().click();
+        sellerRegistrationPage.fillOutAnApplicationBtn().click();
+        sellerRegistrationPageHelper.isAllFieldsIsNotEmpty();
+    }
 
 }
 
