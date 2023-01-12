@@ -139,5 +139,11 @@ public class HomePage extends BasePage {
         return findElementByXpath("//a[contains(@data-form-id, '561')]");
     }
 
+    public WebElement footerStartSellInEpicenter(){
+        return findElementByXpath("//a[contains(@href, '/seller/')]");
+    }
+
+
+
 
 }
