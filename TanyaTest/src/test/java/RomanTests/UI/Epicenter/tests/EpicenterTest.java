@@ -2,13 +2,21 @@ package RomanTests.UI.Epicenter.tests;
 
 import RomanTests.UI.Epicenter.pages.*;
 import TanyaTestFoxtrot.pageObjects.TestInit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EpicenterTest extends TestInit {
 
@@ -493,7 +501,7 @@ public class EpicenterTest extends TestInit {
     }
 
     @Test
-    public void checkVacancies(){
+    public void checkVacancies() {
         HomePage homePage = new HomePage(driver);
         homePage.goEpicenterHomePage();
 
@@ -505,7 +513,7 @@ public class EpicenterTest extends TestInit {
 
         VacanciesPage vacanciesPage = new VacanciesPage(driver);
 
-        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+        for (WebElement vacationLink : vacanciesPage.vacationLinks()) {
             Assert.assertTrue(vacationLink.isDisplayed());
         }
 
@@ -513,26 +521,121 @@ public class EpicenterTest extends TestInit {
         vacanciesPage.citySelect().click();
         vacanciesPage.selectOnePosition().click();
 
-        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+        for (WebElement vacationLink : vacanciesPage.vacationLinks()) {
             Assert.assertTrue(vacationLink.isDisplayed());
         }
 
         vacanciesPage.locationSelect().click();
         vacanciesPage.selectOnePosition().click();
 
-        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+        for (WebElement vacationLink : vacanciesPage.vacationLinks()) {
             Assert.assertTrue(vacationLink.isDisplayed());
         }
 
         vacanciesPage.vacationSelect().click();
         vacanciesPage.selectOnePosition().click();
 
-        for (WebElement vacationLink: vacanciesPage.vacationLinks()) {
+        for (WebElement vacationLink : vacanciesPage.vacationLinks()) {
             Assert.assertTrue(vacationLink.isDisplayed());
         }
 
 
     }
+
+
+    @Test
+    public void checkSquareVertHoriz() {
+        driver.get("https://automation-test-starnavi.netlify.app/");
+        sleep(2);
+        Select select = new Select(driver.findElement(By.xpath("//select")));
+        select.selectByValue("Easy");
+        WebElement button = driver.findElement(By.xpath("//button[contains(@class, 'Button_btn__sIYYr')]"));
+        Assert.assertTrue(button.isEnabled());
+        sleep(1);
+
+        button.click();
+
+        boolean isDisplayed = driver.findElement(By.xpath("//table[contains(@class, 'Field_field__qh8bG')]/tbody")).isDisplayed();
+
+        if (isDisplayed) {
+            System.out.println("Table is displayed");
+        } else {
+            System.out.println("Table is not displayed");
+        }
+
+        int smallSquaresHorizontal = driver.findElements(By.xpath("//tbody/tr")).size();
+        System.out.println(smallSquaresHorizontal);
+        int smallSquaresVertical = driver.findElements(By.xpath("//table[contains(@class, 'Field_field__qh8bG')]/tbody/tr/td[1]")).size();
+        System.out.println("Number of horizontal small squares: " + smallSquaresHorizontal);
+        System.out.println("Number of vertical small squares: " + smallSquaresVertical);
+
+        if (smallSquaresHorizontal == 5 && smallSquaresVertical == 5) {
+            System.out.println("The table contains 5 small squares horizontally and 5 vertically");
+        } else {
+            System.out.println("The table does not contain 5 small squares horizontally and 5 vertically");
+        }
+    }
+
+    @Test
+    public void checkSquare() {
+        driver.get("https://automation-test-starnavi.netlify.app/");
+        sleep(2);
+        Select select = new Select(driver.findElement(By.xpath("//select")));
+        select.selectByValue("Easy");
+        WebElement button = driver.findElement(By.xpath("//button[contains(@class, 'Button_btn__sIYYr')]"));
+        Assert.assertTrue(button.isEnabled());
+
+        button.click();
+
+        boolean isDisplayedBigSquare = driver.findElement(By.xpath("//table[contains(@class, 'Field_field__qh8bG')]/tbody")).isDisplayed();
+
+        Assert.assertTrue(isDisplayedBigSquare);
+
+//        List<WebElement> paragraphs = driver.findElements(By.xpath("//p[contains(@class, 'LogItem_logItem__wb85e')]"));
+
+        Actions actions = new Actions(driver);
+        List<WebElement> squaeres = driver.findElements(By.xpath("//td[contains(@class, 'FieldItem_squareItem__vIzI6 ')]"));
+
+        List<WebElement> paragraphs = new ArrayList<WebElement>();
+
+
+
+        for (WebElement squaere : squaeres) {
+            actions.moveToElement(squaere).build().perform();
+//            sleep(1);
+            while (true) {
+                List<WebElement> newElements = driver.findElements(By.xpath("//p[contains(@class, 'LogItem_logItem__wb85e')]"));
+                if (newElements.size() > paragraphs.size()) {
+                    paragraphs.addAll(newElements);
+                }
+                else {
+                    break;
+                }
+            }
+            System.out.println(paragraphs.size());
+        }
+
+//        for (WebElement squaere : squaeres) {
+//            actions.moveToElement(squaere).build().perform();
+//            sleep(2);
+//            paragraphs.addAll(driver.findElements(By.xpath("//p[contains(@class, 'LogItem_logItem__wb85e')]")));
+//        }
+//        int paragraphSize = paragraphs.size();
+//        System.out.println("Number of paragraphs: " + paragraphSize);
+
+        for (int i = 0;i<squaeres.size();i++){
+            actions.moveToElement(squaeres.get(i)).build().perform();
+            List<WebElement> newElements = driver.findElements(By.xpath("//p[contains(@class, 'LogItem_logItem__wb85e')]"));
+            paragraphs.add(newElements.get(i));
+        }System.out.println(paragraphs.size());
+
+
+    }
+
+
+
+
+
 
 }
 
