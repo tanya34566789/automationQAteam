@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "6d2a5308-af49-4481-a7a1-3d07c5f712cf",
+		"name": "VideoGameDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24041946"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/app/videogames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"videogames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/app/videogames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"videogames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 12,\n  \"name\": \"ne bo\",\n  \"releaseDate\": \"2022-12-12T10:09:17.277Z\",\n  \"reviewScore\": 10,\n  \"category\": \"action-best\",\n  \"rating\": \"10\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/app/videogames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"videogames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 12,\n  \"name\": \"ne bo\",\n  \"releaseDate\": \"2022-12-12T10:09:17.277Z\",\n  \"reviewScore\": 10,\n  \"category\": \"action-best\",\n  \"rating\": \"10\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/app/videogames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"videogames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del Game",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 12,\n  \"name\": \"ne bo\",\n  \"releaseDate\": \"2022-12-12T10:09:17.277Z\",\n  \"reviewScore\": 10,\n  \"category\": \"action-best\",\n  \"rating\": \"10\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/app/videogames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"videogames"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
