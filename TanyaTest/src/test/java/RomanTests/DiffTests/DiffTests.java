@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class DiffTests extends BasePage {
@@ -41,5 +42,7 @@ public class DiffTests extends BasePage {
             System.out.println(user);
         }
     }
+
+
 }
 
